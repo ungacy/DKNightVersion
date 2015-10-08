@@ -44,10 +44,6 @@
     [self hook_setTintColor:tintColor];
 }
 
-- (void)saveNormalColor {
-    self.normalTintColor = self.tintColor;
-}
-
 - (UIColor *)nightTintColor {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTintColor));
     if (nightColor) {

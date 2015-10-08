@@ -44,10 +44,6 @@
     [self hook_setSeparatorColor:separatorColor];
 }
 
-- (void)saveNormalColor {
-    self.normalSeparatorColor = self.separatorColor;
-}
-
 - (UIColor *)nightSeparatorColor {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightSeparatorColor));
     if (nightColor) {
