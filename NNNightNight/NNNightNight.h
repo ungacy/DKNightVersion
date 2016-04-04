@@ -14,15 +14,15 @@ FOUNDATION_EXPORT double NNNightNightVersionNumber;
 #ifndef _NNNightNight_
 #define _NNNightNight_
 
-#import <Core/NNColor.h>
-#import <Core/NNImage.h>
-#import <Core/NNNightManager.h>
-#import <Core/NSObject+Night.h>
+#import "Core/NNColor.h"
+#import "Core/NNImage.h"
+#import "Core/NNNightManager.h"
+#import "Core/NSObject+Night.h"
 
-#import <ColorTable/NNColorTable.h>
+#import "ColorTable/NNColorTable.h"
 
-#import <UIKit/UIKit+Night.h>
-#import <CoreAnimation/CoreAnimation+Night.h>
+#import "UIKit/UIKit+Night.h"
+#import "CoreAnimation/CoreAnimation+Night.h"
 
 
 #endif /* _NNNightNight_ */
