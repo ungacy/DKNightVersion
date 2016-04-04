@@ -1,13 +1,13 @@
 //
 //  NSObject+DeallocBlock.m
-//  DKNightVersion
+//  NNNightNight
 //
 //  Created by nathanwhy on 16/2/24.
 //  Copyright © 2016年 Draveness. All rights reserved.
 //
 
 #import "NSObject+DeallocBlock.h"
-#import "DKDeallocBlockExecutor.h"
+#import "NNDeallocBlockExecutor.h"
 #import <objc/runtime.h>
 
 static void *kNSObject_DeallocBlocks;
@@ -25,13 +25,13 @@ static void *kNSObject_DeallocBlocks;
         objc_setAssociatedObject(self, &kNSObject_DeallocBlocks, deallocBlocks, OBJC_ASSOCIATION_RETAIN);
     }
     // Check if the block is already existed
-    for (DKDeallocBlockExecutor *executor in deallocBlocks) {
+    for (NNDeallocBlockExecutor *executor in deallocBlocks) {
         if (executor.deallocBlock == deallocBlock) {
             return nil;
         }
     }
     
-    DKDeallocBlockExecutor *executor = [DKDeallocBlockExecutor executorWithDeallocBlock:deallocBlock];
+    NNDeallocBlockExecutor *executor = [NNDeallocBlockExecutor executorWithDeallocBlock:deallocBlock];
     [deallocBlocks addObject:executor];
     return executor;
 }

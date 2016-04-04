@@ -1,13 +1,13 @@
 //
 //  PresentingViewController.m
-//  DKNightVersion
+//  NNNightNight
 //
 //  Created by Draveness on 15/5/10.
 //  Copyright (c) 2015年 DeltaX. All rights reserved.
 //
 
 #import "PresentingViewController.h"
-#import "DKNightVersion.h"
+#import "NNNightNight.h"
 
 @interface PresentingViewController ()
 
@@ -33,8 +33,8 @@
     [self.view addSubview:switchButton];
 
     self.view.dk_backgroundColorPicker = DKPickerWithKey(BG);
-    [button dk_setTitleColorPicker:DKColorWithColors([UIColor blueColor], [UIColor whiteColor]) forState:UIControlStateNormal];
-    [switchButton dk_setTitleColorPicker:DKColorWithColors([UIColor blueColor], [UIColor whiteColor]) forState:UIControlStateNormal];
+    [button dk_setTitleColorPicker:NNColorWithColors([UIColor blueColor], [UIColor whiteColor]) forState:UIControlStateNormal];
+    [switchButton dk_setTitleColorPicker:NNColorWithColors([UIColor blueColor], [UIColor whiteColor]) forState:UIControlStateNormal];
 
 }
 
@@ -43,11 +43,11 @@
 }
 
 - (void)switchColor {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
+    NNNightManager *manager = [NNNightManager sharedManager];
     if ([manager.themeVersion isEqualToString:DKThemeVersionNormal]) {
-        [DKNightVersionManager nightFalling];
+        [NNNightManager nightFalling];
     } else {
-        [DKNightVersionManager dawnComing];
+        [NNNightManager dawnComing];
     }
 }
 

@@ -9,23 +9,23 @@
 //  test it. And finally open a pull request.
 
 #import "<%= klass.name %>+Night.h"
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 #import <objc/runtime.h>
 
 @interface <%= klass.name %> ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation <%= klass.name %> (Night)
 
 <% klass.properties.each do |property| %><%= """
-- (DKColorPicker)dk_#{property.name}Picker {
+- (NNColorPicker)dk_#{property.name}Picker {
     return objc_getAssociatedObject(self, @selector(dk_#{property.name}Picker));
 }
 
-- (void)dk_set#{property.cap_name}Picker:(DKColorPicker)picker {
+- (void)dk_set#{property.cap_name}Picker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_#{property.name}Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.#{property.name} = picker();
     [self.pickers setValue:[picker copy] forKey:@\"#{property.setter}\"];

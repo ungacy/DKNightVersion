@@ -9,43 +9,43 @@
 //  test it. And finally open a pull request.
 
 #import "UILabel+Night.h"
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 #import <objc/runtime.h>
 
 @interface UILabel ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation UILabel (Night)
 
 
-- (DKColorPicker)dk_textColorPicker {
+- (NNColorPicker)dk_textColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_textColorPicker));
 }
 
-- (void)dk_setTextColorPicker:(DKColorPicker)picker {
+- (void)dk_setTextColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.textColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setTextColor:"];
 }
 
-- (DKColorPicker)dk_shadowColorPicker {
+- (NNColorPicker)dk_shadowColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_shadowColorPicker));
 }
 
-- (void)dk_setShadowColorPicker:(DKColorPicker)picker {
+- (void)dk_setShadowColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_shadowColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.shadowColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setShadowColor:"];
 }
 
-- (DKColorPicker)dk_highlightedTextColorPicker {
+- (NNColorPicker)dk_highlightedTextColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_highlightedTextColorPicker));
 }
 
-- (void)dk_setHighlightedTextColorPicker:(DKColorPicker)picker {
+- (void)dk_setHighlightedTextColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_highlightedTextColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.highlightedTextColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setHighlightedTextColor:"];

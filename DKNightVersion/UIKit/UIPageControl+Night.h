@@ -13,7 +13,7 @@
 
 @interface UIPageControl (Night)
 
-@property (nonatomic, copy, setter = dk_setPageIndicatorTintColorPicker:) DKColorPicker dk_pageIndicatorTintColorPicker;
-@property (nonatomic, copy, setter = dk_setCurrentPageIndicatorTintColorPicker:) DKColorPicker dk_currentPageIndicatorTintColorPicker;
+@property (nonatomic, copy, setter = dk_setPageIndicatorTintColorPicker:) NNColorPicker dk_pageIndicatorTintColorPicker;
+@property (nonatomic, copy, setter = dk_setCurrentPageIndicatorTintColorPicker:) NNColorPicker dk_currentPageIndicatorTintColorPicker;
 
 @end

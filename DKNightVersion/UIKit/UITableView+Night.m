@@ -9,23 +9,23 @@
 //  test it. And finally open a pull request.
 
 #import "UITableView+Night.h"
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 #import <objc/runtime.h>
 
 @interface UITableView ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation UITableView (Night)
 
 
-- (DKColorPicker)dk_separatorColorPicker {
+- (NNColorPicker)dk_separatorColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_separatorColorPicker));
 }
 
-- (void)dk_setSeparatorColorPicker:(DKColorPicker)picker {
+- (void)dk_setSeparatorColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_separatorColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.separatorColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setSeparatorColor:"];

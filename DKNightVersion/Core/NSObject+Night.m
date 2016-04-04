@@ -1,6 +1,6 @@
 //
 //  NSObject+Night.m
-//  DKNightVersion
+//  NNNightNight
 //
 //  Created by Draveness on 15/11/7.
 //  Copyright © 2015年 DeltaX. All rights reserved.
@@ -14,14 +14,14 @@ static void *DKViewDeallocHelperKey;
 
 @interface NSObject ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation NSObject (Night)
 
-- (NSMutableDictionary<NSString *, DKColorPicker> *)pickers {
-    NSMutableDictionary<NSString *, DKColorPicker> *pickers = objc_getAssociatedObject(self, @selector(pickers));
+- (NSMutableDictionary<NSString *, NNColorPicker> *)pickers {
+    NSMutableDictionary<NSString *, NNColorPicker> *pickers = objc_getAssociatedObject(self, @selector(pickers));
     if (!pickers) {
         
         @autoreleasepool {
@@ -38,18 +38,18 @@ static void *DKViewDeallocHelperKey;
         pickers = [[NSMutableDictionary alloc] init];
         objc_setAssociatedObject(self, @selector(pickers), pickers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionThemeChangingNotificaiton object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:NNNightNightThemeChangingNotificaiton object:nil];
 
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(night_updateColor) name:DKNightVersionThemeChangingNotificaiton object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(night_updateColor) name:NNNightNightThemeChangingNotificaiton object:nil];
     }
     return pickers;
 }
 
 - (void)night_updateColor {
-    [self.pickers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
+    [self.pickers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, NNColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
         SEL sel = NSSelectorFromString(selector);
         id result = picker();
-        [UIView animateWithDuration:DKNightVersionAnimationDuration
+        [UIView animateWithDuration:NNNightNightAnimationDuration
                          animations:^{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"

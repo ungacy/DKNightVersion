@@ -9,33 +9,33 @@
 //  test it. And finally open a pull request.
 
 #import "UISwitch+Night.h"
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 #import <objc/runtime.h>
 
 @interface UISwitch ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation UISwitch (Night)
 
 
-- (DKColorPicker)dk_onTintColorPicker {
+- (NNColorPicker)dk_onTintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_onTintColorPicker));
 }
 
-- (void)dk_setOnTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setOnTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_onTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.onTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setOnTintColor:"];
 }
 
-- (DKColorPicker)dk_thumbTintColorPicker {
+- (NNColorPicker)dk_thumbTintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_thumbTintColorPicker));
 }
 
-- (void)dk_setThumbTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setThumbTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_thumbTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.thumbTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setThumbTintColor:"];

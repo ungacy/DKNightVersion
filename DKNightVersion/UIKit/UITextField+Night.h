@@ -13,6 +13,6 @@
 
 @interface UITextField (Night)
 
-@property (nonatomic, copy, setter = dk_setTextColorPicker:) DKColorPicker dk_textColorPicker;
+@property (nonatomic, copy, setter = dk_setTextColorPicker:) NNColorPicker dk_textColorPicker;
 
 @end

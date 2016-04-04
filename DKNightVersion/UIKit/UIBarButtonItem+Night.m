@@ -9,23 +9,23 @@
 //  test it. And finally open a pull request.
 
 #import "UIBarButtonItem+Night.h"
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 #import <objc/runtime.h>
 
 @interface UIBarButtonItem ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation UIBarButtonItem (Night)
 
 
-- (DKColorPicker)dk_tintColorPicker {
+- (NNColorPicker)dk_tintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_tintColorPicker));
 }
 
-- (void)dk_setTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_tintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.tintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setTintColor:"];

@@ -1,27 +1,27 @@
 //
-//  DKColorTable.h
-//  DKNightVersion
+//  NNColorTable.h
+//  NNNightNight
 //
 //  Created by Draveness on 15/12/11.
 //  Copyright © 2015年 DeltaX. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 
 /**
- *  A convinient macro to create DKColorPicker block.
+ *  A convinient macro to create NNColorPicker block.
  *
  *  @param key Key for corresponding entry in table
  *
- *  @return DKColorPicker
+ *  @return NNColorPicker
  */
-#define DKPickerWithKey(key) [[DKColorTable sharedColorTable] pickerWithKey:@#key]
+#define DKPickerWithKey(key) [[NNColorTable sharedColorTable] pickerWithKey:@#key]
 
 /**
- *  DKColorTable is a new feature in 2.x, which providing you a very convinient and
+ *  NNColorTable is a new feature in 2.x, which providing you a very convinient and
  *  delightful approach to manage all your color in an iOS project. Besides that, we
- *  support multiple themes with DKColorTable, change your `DKColorTable.txt` file 
+ *  support multiple themes with NNColorTable, change your `NNColorTable.txt` file 
  *  like this:
  *  
  *  Ex:
@@ -30,15 +30,15 @@
  *      #ffffff  #343434 #ff0000 BG
  *      #aaaaaa  #313131 #ff0000 SEP
  *
- *  And you can directly change `[DKNightVersionManager sharedManager].themeVersion` to
+ *  And you can directly change `[NNNightManager sharedManager].themeVersion` to
  *  what you want, like: `RED` `NORMAL` and `NIGHT`. And trigger to post notification 
  *  and update corresponding color.
  */
-@interface DKColorTable : NSObject
+@interface NNColorTable : NSObject
 
 /**
- *  Call `- reloadColorTable` will trigger `DKColorTable` to load this file,
- *  default is `DKColorTable.txt`. Don't need to call `- reloadColorTable` after
+ *  Call `- reloadColorTable` will trigger `NNColorTable` to load this file,
+ *  default is `NNColorTable.txt`. Don't need to call `- reloadColorTable` after
  *  setting this property, cuz we have already do it for you.
  */
 @property (nonatomic, strong) NSString *file;
@@ -47,7 +47,7 @@
  *  Return color table instance, you MUST use this method instead of `- init`,
  *  `- init` method may have negative impact on your performance.
  *
- *  @return An instance of DKColorTable
+ *  @return An instance of NNColorTable
  */
 + (instancetype)sharedColorTable;
 
@@ -58,7 +58,7 @@
 - (void)reloadColorTable;
 
 /**
- *  Return a `DKColorPicker` with `key`, but I suggest you use marcho `DKPickerWithKey(key)`
+ *  Return a `NNColorPicker` with `key`, but I suggest you use marcho `DKPickerWithKey(key)`
  *  instead of calling this method.
  *
  *  Ex:
@@ -75,8 +75,8 @@
  *
  *  @param key Which indicates the entry you refer to
  *
- *  @return An DKColorPicker block
+ *  @return An NNColorPicker block
  */
-- (DKColorPicker)pickerWithKey:(NSString *)key;
+- (NNColorPicker)pickerWithKey:(NSString *)key;
 
 @end

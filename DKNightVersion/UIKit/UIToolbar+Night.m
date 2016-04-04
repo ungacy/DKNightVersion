@@ -9,23 +9,23 @@
 //  test it. And finally open a pull request.
 
 #import "UIToolbar+Night.h"
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 #import <objc/runtime.h>
 
 @interface UIToolbar ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation UIToolbar (Night)
 
 
-- (DKColorPicker)dk_barTintColorPicker {
+- (NNColorPicker)dk_barTintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_barTintColorPicker));
 }
 
-- (void)dk_setBarTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setBarTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_barTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.barTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setBarTintColor:"];

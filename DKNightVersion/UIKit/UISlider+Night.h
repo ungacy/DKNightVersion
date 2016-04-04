@@ -13,8 +13,8 @@
 
 @interface UISlider (Night)
 
-@property (nonatomic, copy, setter = dk_setMinimumTrackTintColorPicker:) DKColorPicker dk_minimumTrackTintColorPicker;
-@property (nonatomic, copy, setter = dk_setMaximumTrackTintColorPicker:) DKColorPicker dk_maximumTrackTintColorPicker;
-@property (nonatomic, copy, setter = dk_setThumbTintColorPicker:) DKColorPicker dk_thumbTintColorPicker;
+@property (nonatomic, copy, setter = dk_setMinimumTrackTintColorPicker:) NNColorPicker dk_minimumTrackTintColorPicker;
+@property (nonatomic, copy, setter = dk_setMaximumTrackTintColorPicker:) NNColorPicker dk_maximumTrackTintColorPicker;
+@property (nonatomic, copy, setter = dk_setThumbTintColorPicker:) NNColorPicker dk_thumbTintColorPicker;
 
 @end

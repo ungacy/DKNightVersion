@@ -1,13 +1,13 @@
 //
 //  SuccViewController.m
-//  DKNightVersion
+//  NNNightNight
 //
 //  Created by Draveness on 4/28/15.
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
 
 #import "SuccViewController.h"
-#import "DKNightVersion.h"
+#import "NNNightNight.h"
 
 @interface SuccViewController ()
 
@@ -23,7 +23,7 @@
     [super viewDidLoad];
 
     self.view.dk_backgroundColorPicker = DKPickerWithKey(BG);
-    self.navigationController.navigationBar.dk_tintColorPicker = DKColorWithColors([UIColor blueColor], [UIColor redColor]);
+    self.navigationController.navigationBar.dk_tintColorPicker = NNColorWithColors([UIColor blueColor], [UIColor redColor]);
 }
 
 @end

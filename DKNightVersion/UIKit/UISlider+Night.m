@@ -9,43 +9,43 @@
 //  test it. And finally open a pull request.
 
 #import "UISlider+Night.h"
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 #import <objc/runtime.h>
 
 @interface UISlider ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation UISlider (Night)
 
 
-- (DKColorPicker)dk_minimumTrackTintColorPicker {
+- (NNColorPicker)dk_minimumTrackTintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_minimumTrackTintColorPicker));
 }
 
-- (void)dk_setMinimumTrackTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setMinimumTrackTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_minimumTrackTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.minimumTrackTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setMinimumTrackTintColor:"];
 }
 
-- (DKColorPicker)dk_maximumTrackTintColorPicker {
+- (NNColorPicker)dk_maximumTrackTintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_maximumTrackTintColorPicker));
 }
 
-- (void)dk_setMaximumTrackTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setMaximumTrackTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_maximumTrackTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.maximumTrackTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setMaximumTrackTintColor:"];
 }
 
-- (DKColorPicker)dk_thumbTintColorPicker {
+- (NNColorPicker)dk_thumbTintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_thumbTintColorPicker));
 }
 
-- (void)dk_setThumbTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setThumbTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_thumbTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.thumbTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setThumbTintColor:"];

@@ -1,6 +1,6 @@
 //
 //  RootViewController.m
-//  DKNightVerision
+//  NNNightNight
 //
 //  Created by Draveness on 4/14/15.
 //  Copyright (c) 2015 Draveness. All rights reserved.
@@ -9,7 +9,7 @@
 #import "RootViewController.h"
 #import "SuccViewController.h"
 #import "PresentingViewController.h"
-#import "DKNightVersion.h"
+#import "NNNightNight.h"
 #import "TableViewCell.h"
 
 
@@ -25,7 +25,7 @@
     [self.tableView registerClass:[TableViewCell class] forCellReuseIdentifier:@"Cell"];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     UILabel *navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 375, 44)];
-    navigationLabel.text = @"DKNightVersion";
+    navigationLabel.text = @"NNNightNight";
     navigationLabel.textAlignment = NSTextAlignmentCenter;
     self.navigationItem.titleView = navigationLabel;
 
@@ -37,21 +37,21 @@
 
 
     self.tableView.dk_backgroundColorPicker =  DKPickerWithKey(BG);
-    self.tableView.dk_separatorColorPicker = DKColorWithRGB(0xaaaaaa, 0x313131);
-    navigationLabel.dk_textColorPicker = DKColorWithColors([UIColor blackColor], [UIColor whiteColor]);
-    self.navigationController.navigationBar.dk_barTintColorPicker = DKColorWithRGB(0xffffff, 0x444444);
-    self.navigationItem.leftBarButtonItem.dk_tintColorPicker = DKColorWithColors([UIColor blueColor], [UIColor whiteColor]);
-    self.navigationItem.rightBarButtonItem.dk_tintColorPicker = DKColorWithColors([UIColor blueColor], [UIColor whiteColor]);
+    self.tableView.dk_separatorColorPicker = NNColorWithRGB(0xaaaaaa, 0x313131);
+    navigationLabel.dk_textColorPicker = NNColorWithColors([UIColor blackColor], [UIColor whiteColor]);
+    self.navigationController.navigationBar.dk_barTintColorPicker = NNColorWithRGB(0xffffff, 0x444444);
+    self.navigationItem.leftBarButtonItem.dk_tintColorPicker = NNColorWithColors([UIColor blueColor], [UIColor whiteColor]);
+    self.navigationItem.rightBarButtonItem.dk_tintColorPicker = NNColorWithColors([UIColor blueColor], [UIColor whiteColor]);
 
 }
 
 - (void)change {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
+    NNNightManager *manager = [NNNightManager sharedManager];
 
     if ([manager.themeVersion isEqualToString:DKThemeVersionNight]) {
-        [DKNightVersionManager dawnComing];
+        [NNNightManager dawnComing];
     } else {
-        [DKNightVersionManager nightFalling];
+        [NNNightManager nightFalling];
     }
 }
 

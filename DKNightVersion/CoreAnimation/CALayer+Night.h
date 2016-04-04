@@ -1,6 +1,6 @@
 //
 //  CALayer+Night.h
-//  DKNightVersion
+//  NNNightNight
 //
 //  Created by Draveness on 16/1/29.
 //  Copyright © 2016年 DeltaX. All rights reserved.
@@ -11,8 +11,8 @@
 
 @interface CALayer (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_shadowColorPicker;
-@property (nonatomic, copy) DKColorPicker dk_borderColorPicker;
-@property (nonatomic, copy) DKColorPicker dk_backgroundColorPicker;
+@property (nonatomic, copy) NNColorPicker dk_shadowColorPicker;
+@property (nonatomic, copy) NNColorPicker dk_borderColorPicker;
+@property (nonatomic, copy) NNColorPicker dk_backgroundColorPicker;
 
 @end

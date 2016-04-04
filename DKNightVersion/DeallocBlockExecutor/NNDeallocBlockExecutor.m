@@ -1,17 +1,17 @@
 //
 //  DeallocBlockExecutor.m
-//  DKNightVersion
+//  NNNightNight
 //
 //  Created by nathanwhy on 16/2/24.
 //  Copyright © 2016年 Draveness. All rights reserved.
 //
 
-#import "DKDeallocBlockExecutor.h"
+#import "NNDeallocBlockExecutor.h"
 
-@implementation DKDeallocBlockExecutor
+@implementation NNDeallocBlockExecutor
 
 + (instancetype)executorWithDeallocBlock:(void (^)())deallocBlock {
-    DKDeallocBlockExecutor *o = [DKDeallocBlockExecutor new];
+    NNDeallocBlockExecutor *o = [NNDeallocBlockExecutor new];
     o.deallocBlock = deallocBlock;
     return o;
 }

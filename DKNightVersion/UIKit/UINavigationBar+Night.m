@@ -9,33 +9,33 @@
 //  test it. And finally open a pull request.
 
 #import "UINavigationBar+Night.h"
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 #import <objc/runtime.h>
 
 @interface UINavigationBar ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation UINavigationBar (Night)
 
 
-- (DKColorPicker)dk_barTintColorPicker {
+- (NNColorPicker)dk_barTintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_barTintColorPicker));
 }
 
-- (void)dk_setBarTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setBarTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_barTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.barTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setBarTintColor:"];
 }
 
-- (DKColorPicker)dk_tintColorPicker {
+- (NNColorPicker)dk_tintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_tintColorPicker));
 }
 
-- (void)dk_setTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_tintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.tintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setTintColor:"];

@@ -14,7 +14,7 @@ task :default do
     basename = File.basename(xcode_proj_file)
     production = basename.start_with?('Pod')
     puts "[Generate] Start to generates UIKit files".yellow
-    path = if production then 'DKNightVersion' else '.' end
+    path = if production then 'NNNightNight' else '.' end
     files = objc_code_generator(table, path)
     json_file_path = File.join('generator', 'lib', 'generator', 'json', 'project.json')
     File.write json_file_path, files.to_json
@@ -36,5 +36,5 @@ task :default do
 
     FileUtils.mv(output_file, input_file)
 
-    puts "[DKNightVersion] has already generate all files".green
+    puts "[NNNightNight] has already generate all files".green
 end

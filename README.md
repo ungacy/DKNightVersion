@@ -2,8 +2,8 @@
 
 <p align="center">
 <a href="https://img.shields.io/badge/Language-%20Objective--C%20-orange.svg"><img src="https://img.shields.io/badge/Language-%20Objective--C%20-orange.svg"></a>
-<a href="http://cocoadocs.org/docsets/DKNightVersion"><img src="http://img.shields.io/cocoapods/v/DKNightVersion.svg?style=flat"></a>
-<a href="https://travis-ci.org/Draveness/DKNightVersion"><img src="https://travis-ci.org/Draveness/DKNightVersion.png"></a>
+<a href="http://cocoadocs.org/docsets/NNNightNight"><img src="http://img.shields.io/cocoapods/v/NNNightNight.svg?style=flat"></a>
+<a href="https://travis-ci.org/Draveness/NNNightNight"><img src="https://travis-ci.org/Draveness/NNNightNight.png"></a>
 <img src="https://img.shields.io/badge/license-MIT-blue.svg">
 <a href="https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg"><img src="https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg"></a>
 </p>
@@ -19,15 +19,15 @@
 - [x] Read color customization from file
 - [x] Support different themes
 - [ ] Support NSAttributedString
-- [ ] Default DKColorPicker
+- [ ] Default NNColorPicker
 
 # Demo
 
-![](./images/DKNightVersion.gif)
+![](./images/NNNightNight.gif)
 
 # Installation with CocoaPods
 
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like DKNightVersion in your projects. See the [Get Started section](https://cocoapods.org/#get_started) for more details.
+[CocoaPods](https://cocoapods.org/) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like NNNightNight in your projects. See the [Get Started section](https://cocoapods.org/#get_started) for more details.
 
 ## Podfile
 
@@ -40,7 +40,7 @@ $ pod update
 Add this line to your `podfile`
 
 ```shell
-pod "DKNightVersion", "~> 2.0.0"
+pod "NNNightNight", "~> 2.0.0"
 ```
 
 ## Usage
@@ -48,18 +48,18 @@ pod "DKNightVersion", "~> 2.0.0"
 Just add one line of code in your precompiled header, or import it where you need.
 
 ```objectivec
-#import "DKNightVersion.h"
+#import "NNNightNight.h"
 ```
 
 ----
 
 # How to use
 
-## DKColorTable
+## NNColorTable
 
-+ Version 2.0 bring us a very powerful feature, DKNightVersion **supported different themes and read color from a txt file**.
++ Version 2.0 bring us a very powerful feature, NNNightNight **supported different themes and read color from a txt file**.
 
-There is a `DKColorTable.txt` file in your project, you can also create it by yourself. DKNightVersion will read color setting from this file when app is start launching. This file look like this.
+There is a `NNColorTable.txt` file in your project, you can also create it by yourself. NNNightNight will read color setting from this file when app is start launching. This file look like this.
 
 ```
 NORMAL   NIGHT
@@ -78,10 +78,10 @@ NORMAL   NIGHT   RED
 When you successfully and `RED`, you can change to `RED` theme by this, it will trigger global theme change to `RED`.
 
 ```objectivec
-[DKNightVersionManager sharedManager].themeVersion = @"RED";
+[NNNightManager sharedManager].themeVersion = @"RED";
 ```
 
-Use `DKPickerWithKey` to generate a DKColorPicker
+Use `DKPickerWithKey` to generate a NNColorPicker
 
 ```objectivec
 self.view.dk_backgroundColorPicker = DKPickerWithKey(BG);
@@ -89,99 +89,99 @@ self.view.dk_backgroundColorPicker = DKPickerWithKey(BG);
 
 ## Night color
 
-DKNightVersion is based on picker, such as `dk_backgroundColorPicker` `dk_separatorColorPicker` and etc. Assign the night mode color picker you want to the `UIKit` component like this:
+NNNightNight is based on picker, such as `dk_backgroundColorPicker` `dk_separatorColorPicker` and etc. Assign the night mode color picker you want to the `UIKit` component like this:
 
 ```objectivec
-self.tableView.dk_backgroundColorPicker =  DKColorWithRGB(0xffffff, 0x343434);
-self.tableView.dk_separatorColorPicker = DKColorWithRGB(0xaaaaaa, 0x313131);
-navigationLabel.dk_textColorPicker = DKColorWithColors([UIColor blackColor], [UIColor whiteColor]);
+self.tableView.dk_backgroundColorPicker =  NNColorWithRGB(0xffffff, 0x343434);
+self.tableView.dk_separatorColorPicker = NNColorWithRGB(0xaaaaaa, 0x313131);
+navigationLabel.dk_textColorPicker = NNColorWithColors([UIColor blackColor], [UIColor whiteColor]);
 ```
 
 ## Night Image
 
-DKNightVersion providing new `API` to support image switching.
+NNNightNight providing new `API` to support image switching.
 
 ```objectivec
-imageView.dk_imagePicker = DKImageWithNames(@"normal1", @"night1");
+imageView.dk_imagePicker = NNImageWithNames(@"normal1", @"night1");
 ```
 
 
-## DKColor
+## NNColor
 
-`DKColor` provides `- pickerWithNormalColor:nightColor:` to create `DKColorPicker`.
+`NNColor` provides `- pickerWithNormalColor:nightColor:` to create `NNColorPicker`.
 
 ```objectivec
-DKColorPicker DKColorWithRGB(NSUInteger normal, NSUInteger night);
-DKColorPicker DKColorWithColors(UIColor *normalColor, UIColor *nightColor);
+NNColorPicker NNColorWithRGB(NSUInteger normal, NSUInteger night);
+NNColorPicker NNColorWithColors(UIColor *normalColor, UIColor *nightColor);
 ```
 
-`DKColor` also provides a cluster of convienient `API` like `UIColor` which returns `DKColorPicker` block, these block return the same color when switch to night mode or switch back.
+`NNColor` also provides a cluster of convienient `API` like `UIColor` which returns `NNColorPicker` block, these block return the same color when switch to night mode or switch back.
 
 ```objectivec
-+ (DKColorPicker)pickerWithUIColor:(UIColor *)color;
-+ (DKColorPicker)colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
-+ (DKColorPicker)colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
-+ (DKColorPicker)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
-+ (DKColorPicker)colorWithCGColor:(CGColorRef)cgColor;
-+ (DKColorPicker)colorWithPatternImage:(UIImage *)image;
++ (NNColorPicker)pickerWithUIColor:(UIColor *)color;
++ (NNColorPicker)colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
++ (NNColorPicker)colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
++ (NNColorPicker)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
++ (NNColorPicker)colorWithCGColor:(CGColorRef)cgColor;
++ (NNColorPicker)colorWithPatternImage:(UIImage *)image;
 #if __has_include(<CoreImage/CoreImage.h>)
-+ (DKColorPicker)colorWithCIColor:(CIColor *)ciColor NS_AVAILABLE_IOS(5_0);
++ (NNColorPicker)colorWithCIColor:(CIColor *)ciColor NS_AVAILABLE_IOS(5_0);
 #endif
 
-+ (DKColorPicker)blackColor;
-+ (DKColorPicker)darkGrayColor;
-+ (DKColorPicker)lightGrayColor;
-+ (DKColorPicker)whiteColor;
-+ (DKColorPicker)grayColor;
-+ (DKColorPicker)redColor;
-+ (DKColorPicker)greenColor;
-+ (DKColorPicker)blueColor;
-+ (DKColorPicker)cyanColor;
-+ (DKColorPicker)yellowColor;
-+ (DKColorPicker)magentaColor;
-+ (DKColorPicker)orangeColor;
-+ (DKColorPicker)purpleColor;
-+ (DKColorPicker)brownColor;
-+ (DKColorPicker)clearColor;
++ (NNColorPicker)blackColor;
++ (NNColorPicker)darkGrayColor;
++ (NNColorPicker)lightGrayColor;
++ (NNColorPicker)whiteColor;
++ (NNColorPicker)grayColor;
++ (NNColorPicker)redColor;
++ (NNColorPicker)greenColor;
++ (NNColorPicker)blueColor;
++ (NNColorPicker)cyanColor;
++ (NNColorPicker)yellowColor;
++ (NNColorPicker)magentaColor;
++ (NNColorPicker)orangeColor;
++ (NNColorPicker)purpleColor;
++ (NNColorPicker)brownColor;
++ (NNColorPicker)clearColor;
 ```
 
-## DKColorTable
+## NNColorTable
 
-If you have the same `DKColorPicker` for different UIKit components, use `DKColorTable` to save them and take out of them with `DKPickerFromTable(NSString *key)` function.
+If you have the same `NNColorPicker` for different UIKit components, use `NNColorTable` to save them and take out of them with `DKPickerFromTable(NSString *key)` function.
 
-DKColorTable provides three methods and a C function to manipulate color table and get picker from it.
+NNColorTable provides three methods and a C function to manipulate color table and get picker from it.
 
 ```objectivec
 DKPickerFromTable(NSString *key)
 
-+ (void)addPicker:(DKColorPicker)picker withKey:(NSString *)key;
-+ (DKColorPicker)removePickerWithKey:(NSString *)key;
-+ (DKColorPicker)pickerWithKey:(NSString *)key;
++ (void)addPicker:(NNColorPicker)picker withKey:(NSString *)key;
++ (NNColorPicker)removePickerWithKey:(NSString *)key;
++ (NNColorPicker)pickerWithKey:(NSString *)key;
 ```
 
 
-## DKImage
+## NNImage
 
-DKImage is similar with DKColor which contains methods to generate `DKImagePicker`
+NNImage is similar with NNColor which contains methods to generate `NNImagePicker`
 
 ```objectivec
-DKImagePicker DKImageWithNames(NSString *normal, NSString *night);
-DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night);
+NNImagePicker NNImageWithNames(NSString *normal, NSString *night);
+NNImagePicker NNImageWithImages(UIImage *normal, UIImage *night);
 ```
 
 
-## Using DKNightVersionManager change theme
+## Using NNNightManager change theme
 
-Use `DKNightVersionManager` sets the theme.
+Use `NNNightManager` sets the theme.
 
 ```objectivec
-[DKNightVersionManager nightFalling];
+[NNNightManager nightFalling];
 ```
 
 If you'd like to switch back to normal mode:
 
 ```objectivec
-[DKNightVersionManager dawnComing];
+[NNNightManager dawnComing];
 ```
 
 It's pretty easy to swich theme between night and normal mode.
@@ -190,7 +190,7 @@ It's pretty easy to swich theme between night and normal mode.
 
 ### Notification
 
-`nightFalling` method will post `DKNightVersionNightFallingNotification` when it is called. Similarly, `dawnComing` will post `DKNightVersionDawnComingNotification`. You can observe these notification in proper place, and make your own customize easily.
+`nightFalling` method will post `NNNightNightNightFallingNotification` when it is called. Similarly, `dawnComing` will post `NNNightNightDawnComingNotification`. You can observe these notification in proper place, and make your own customize easily.
 
 # Contribute
 
@@ -207,7 +207,7 @@ Feel free to open an issue or pull request, if you need help or there is a bug.
 
 # License
 
-DKNightVersion is available under the MIT license. See the LICENSE file for more info.
+NNNightNight is available under the MIT license. See the LICENSE file for more info.
 
 The MIT License (MIT)
 

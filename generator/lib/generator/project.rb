@@ -31,7 +31,7 @@ def get_target(project, production)
     if production
         project.targets.reduce(project.targets.first) do |init, t| 
             puts "[Find] Find target #{t}"
-            if t.to_s.include? 'DKNightVersion' 
+            if t.to_s.include? 'NNNightNight' 
                 init = t
             end
         end
@@ -42,9 +42,9 @@ end
 
 def get_group_name(production)
     if production 
-        'Pods/DKNightVersion/UIKit' 
+        'Pods/NNNightNight/UIKit' 
     else
-        'DKNightVersion/Pod/Classes/UIKit'
+        'NNNightNight/Pod/Classes/UIKit'
     end
 end
 

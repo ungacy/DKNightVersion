@@ -9,33 +9,33 @@
 //  test it. And finally open a pull request.
 
 #import "UIProgressView+Night.h"
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 #import <objc/runtime.h>
 
 @interface UIProgressView ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation UIProgressView (Night)
 
 
-- (DKColorPicker)dk_progressTintColorPicker {
+- (NNColorPicker)dk_progressTintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_progressTintColorPicker));
 }
 
-- (void)dk_setProgressTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setProgressTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_progressTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.progressTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setProgressTintColor:"];
 }
 
-- (DKColorPicker)dk_trackTintColorPicker {
+- (NNColorPicker)dk_trackTintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_trackTintColorPicker));
 }
 
-- (void)dk_setTrackTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setTrackTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_trackTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.trackTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setTrackTintColor:"];

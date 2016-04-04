@@ -9,33 +9,33 @@
 //  test it. And finally open a pull request.
 
 #import "UIView+Night.h"
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 #import <objc/runtime.h>
 
 @interface UIView ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NNColorPicker> *pickers;
 
 @end
 
 @implementation UIView (Night)
 
 
-- (DKColorPicker)dk_backgroundColorPicker {
+- (NNColorPicker)dk_backgroundColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_backgroundColorPicker));
 }
 
-- (void)dk_setBackgroundColorPicker:(DKColorPicker)picker {
+- (void)dk_setBackgroundColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.backgroundColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setBackgroundColor:"];
 }
 
-- (DKColorPicker)dk_tintColorPicker {
+- (NNColorPicker)dk_tintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_tintColorPicker));
 }
 
-- (void)dk_setTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setTintColorPicker:(NNColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_tintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.tintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setTintColor:"];

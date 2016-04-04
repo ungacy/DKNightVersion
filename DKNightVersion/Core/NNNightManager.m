@@ -1,53 +1,53 @@
 //
-//  DKNightVersionManager.m
-//  DKNightVersionManager
+//  NNNightManager.m
+//  NNNightManager
 //
 //  Created by Draveness on 4/14/15.
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
 
-#import "DKNightVersionManager.h"
+#import "NNNightManager.h"
 
 NSString * const DKThemeVersionNormal = @"NORMAL";
 NSString * const DKThemeVersionNight = @"NIGHT";
 
-NSString * const DKNightVersionThemeChangingNotificaiton = @"DKNightVersionThemeChangingNotificaiton";
+NSString * const NNNightNightThemeChangingNotificaiton = @"NNNightNightThemeChangingNotificaiton";
 
-CGFloat const DKNightVersionAnimationDuration = 0.3;
+CGFloat const NNNightNightAnimationDuration = 0.3;
 
-NSString * const DKNightVersionCurrentThemeVersionKey = @"com.dknightversion.manager.themeversion";
+NSString * const NNNightNightCurrentThemeVersionKey = @"com.NNNightNight.manager.themeversion";
 
-@interface DKNightVersionManager ()
+@interface NNNightManager ()
 
 @end
 
-@implementation DKNightVersionManager
+@implementation NNNightManager
 
-+ (DKNightVersionManager *)sharedManager {
++ (NNNightManager *)sharedManager {
     static dispatch_once_t once;
-    static DKNightVersionManager *instance;
+    static NNNightManager *instance;
     dispatch_once(&once, ^{
         instance = [self new];
         instance.changeStatusBar = YES;
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        DKThemeVersion *themeVersion = [userDefaults valueForKey:DKNightVersionCurrentThemeVersionKey];
+        DKThemeVersion *themeVersion = [userDefaults valueForKey:NNNightNightCurrentThemeVersionKey];
         themeVersion = themeVersion ?: DKThemeVersionNormal;
         instance.themeVersion = themeVersion;
     });
     return instance;
 }
 
-+ (DKNightVersionManager *)sharedNightVersionManager {
++ (NNNightManager *)sharedNightVersionManager {
     return [self sharedManager];
 }
 
 + (void)nightFalling {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
+    NNNightManager *manager = [NNNightManager sharedManager];
     manager.themeVersion = DKThemeVersionNight;
 }
 
 + (void)dawnComing {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
+    NNNightManager *manager = [NNNightManager sharedManager];
     manager.themeVersion = DKThemeVersionNormal;
 }
 
@@ -59,8 +59,8 @@ NSString * const DKNightVersionCurrentThemeVersionKey = @"com.dknightversion.man
     _themeVersion = themeVersion;
 
     // Save current theme version to user default
-    [[NSUserDefaults standardUserDefaults] setValue:themeVersion forKey:DKNightVersionCurrentThemeVersionKey];
-    [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionThemeChangingNotificaiton
+    [[NSUserDefaults standardUserDefaults] setValue:themeVersion forKey:NNNightNightCurrentThemeVersionKey];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NNNightNightThemeChangingNotificaiton
                                                         object:nil];
 
     if (self.shouldChangeStatusBar) {

@@ -11,22 +11,22 @@
 		18D228A11AF8BB7800872BF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2289F1AF8BB7800872BF1 /* main.m */; };
 		18D228A61AF8BB8D00872BF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D228A51AF8BB8D00872BF1 /* Images.xcassets */; };
 		18D228A71AF8BC1A00872BF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D228A21AF8BB8500872BF1 /* LaunchScreen.xib */; };
-		72618DBF1CAE2A2400D550C8 /* DKColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DBC1CAE2A2400D550C8 /* DKColorTable.h */; };
-		72618DC01CAE2A2400D550C8 /* DKColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DBD1CAE2A2400D550C8 /* DKColorTable.m */; };
-		72618DC11CAE2A2400D550C8 /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72618DBE1CAE2A2400D550C8 /* DKColorTable.txt */; };
-		72618DCB1CAE2A2E00D550C8 /* DKColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DC31CAE2A2E00D550C8 /* DKColor.h */; };
-		72618DCC1CAE2A2E00D550C8 /* DKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DC41CAE2A2E00D550C8 /* DKColor.m */; };
-		72618DCD1CAE2A2E00D550C8 /* DKImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DC51CAE2A2E00D550C8 /* DKImage.h */; };
-		72618DCE1CAE2A2E00D550C8 /* DKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DC61CAE2A2E00D550C8 /* DKImage.m */; };
-		72618DCF1CAE2A2E00D550C8 /* DKNightVersionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DC71CAE2A2E00D550C8 /* DKNightVersionManager.h */; };
-		72618DD01CAE2A2E00D550C8 /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DC81CAE2A2E00D550C8 /* DKNightVersionManager.m */; };
+		72618DBF1CAE2A2400D550C8 /* NNColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DBC1CAE2A2400D550C8 /* NNColorTable.h */; };
+		72618DC01CAE2A2400D550C8 /* NNColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DBD1CAE2A2400D550C8 /* NNColorTable.m */; };
+		72618DC11CAE2A2400D550C8 /* NNColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72618DBE1CAE2A2400D550C8 /* NNColorTable.txt */; };
+		72618DCB1CAE2A2E00D550C8 /* NNColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DC31CAE2A2E00D550C8 /* NNColor.h */; };
+		72618DCC1CAE2A2E00D550C8 /* NNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DC41CAE2A2E00D550C8 /* NNColor.m */; };
+		72618DCD1CAE2A2E00D550C8 /* NNImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DC51CAE2A2E00D550C8 /* NNImage.h */; };
+		72618DCE1CAE2A2E00D550C8 /* NNImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DC61CAE2A2E00D550C8 /* NNImage.m */; };
+		72618DCF1CAE2A2E00D550C8 /* NNNightManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DC71CAE2A2E00D550C8 /* NNNightManager.h */; };
+		72618DD01CAE2A2E00D550C8 /* NNNightManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DC81CAE2A2E00D550C8 /* NNNightManager.m */; };
 		72618DD11CAE2A2E00D550C8 /* NSObject+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DC91CAE2A2E00D550C8 /* NSObject+Night.h */; };
 		72618DD21CAE2A2E00D550C8 /* NSObject+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DCA1CAE2A2E00D550C8 /* NSObject+Night.m */; };
-		72618DFF1CAE2A4200D550C8 /* DKDeallocBlockExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DD41CAE2A4200D550C8 /* DKDeallocBlockExecutor.h */; };
-		72618E001CAE2A4200D550C8 /* DKDeallocBlockExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DD51CAE2A4200D550C8 /* DKDeallocBlockExecutor.m */; };
+		72618DFF1CAE2A4200D550C8 /* NNDeallocBlockExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DD41CAE2A4200D550C8 /* NNDeallocBlockExecutor.h */; };
+		72618E001CAE2A4200D550C8 /* NNDeallocBlockExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DD51CAE2A4200D550C8 /* NNDeallocBlockExecutor.m */; };
 		72618E011CAE2A4200D550C8 /* NSObject+DeallocBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DD61CAE2A4200D550C8 /* NSObject+DeallocBlock.h */; };
 		72618E021CAE2A4200D550C8 /* NSObject+DeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DD71CAE2A4200D550C8 /* NSObject+DeallocBlock.m */; };
-		72618E2E1CAE2A7300D550C8 /* DKNightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618E2D1CAE2A7300D550C8 /* DKNightVersion.h */; };
+		72618E2E1CAE2A7300D550C8 /* NNNightNight.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618E2D1CAE2A7300D550C8 /* NNNightNight.h */; };
 		72618E551CAE2C6A00D550C8 /* UIBarButtonItem+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618E301CAE2C6A00D550C8 /* UIBarButtonItem+Night.h */; };
 		72618E561CAE2C6A00D550C8 /* UIBarButtonItem+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618E311CAE2C6A00D550C8 /* UIBarButtonItem+Night.m */; };
 		72618E571CAE2C6A00D550C8 /* UIButton+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618E321CAE2C6A00D550C8 /* UIButton+Night.h */; };
@@ -105,8 +105,8 @@
 		182BCC231AFF199A0095BF9C /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresentingViewController.h; path = Demo/PresentingViewController.h; sourceTree = SOURCE_ROOT; };
 		182BCC241AFF199A0095BF9C /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresentingViewController.m; path = Demo/PresentingViewController.m; sourceTree = SOURCE_ROOT; };
 		186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionManagerTest.m; sourceTree = "<group>"; };
-		189854B61ADD5B550050568B /* DKNightVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKNightVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		189854C91ADD5B560050568B /* DKNightVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKNightVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		189854B61ADD5B550050568B /* NNNightNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNNightNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		189854C91ADD5B560050568B /* NNNightNight.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NNNightNight.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854CE1ADD5B560050568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D228921AF8BB6200872BF1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Demo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		18D228931AF8BB6200872BF1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Demo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -120,22 +120,22 @@
 		18D2289F1AF8BB7800872BF1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Demo/main.m; sourceTree = SOURCE_ROOT; };
 		18D228A31AF8BB8500872BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Demo/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		18D228A51AF8BB8D00872BF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Demo/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		72618DBC1CAE2A2400D550C8 /* DKColorTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKColorTable.h; sourceTree = "<group>"; };
-		72618DBD1CAE2A2400D550C8 /* DKColorTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKColorTable.m; sourceTree = "<group>"; };
-		72618DBE1CAE2A2400D550C8 /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKColorTable.txt; sourceTree = "<group>"; };
-		72618DC31CAE2A2E00D550C8 /* DKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKColor.h; sourceTree = "<group>"; };
-		72618DC41CAE2A2E00D550C8 /* DKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKColor.m; sourceTree = "<group>"; };
-		72618DC51CAE2A2E00D550C8 /* DKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKImage.h; sourceTree = "<group>"; };
-		72618DC61CAE2A2E00D550C8 /* DKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKImage.m; sourceTree = "<group>"; };
-		72618DC71CAE2A2E00D550C8 /* DKNightVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersionManager.h; sourceTree = "<group>"; };
-		72618DC81CAE2A2E00D550C8 /* DKNightVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionManager.m; sourceTree = "<group>"; };
+		72618DBC1CAE2A2400D550C8 /* NNColorTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNColorTable.h; sourceTree = "<group>"; };
+		72618DBD1CAE2A2400D550C8 /* NNColorTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNColorTable.m; sourceTree = "<group>"; };
+		72618DBE1CAE2A2400D550C8 /* NNColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NNColorTable.txt; sourceTree = "<group>"; };
+		72618DC31CAE2A2E00D550C8 /* NNColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNColor.h; sourceTree = "<group>"; };
+		72618DC41CAE2A2E00D550C8 /* NNColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNColor.m; sourceTree = "<group>"; };
+		72618DC51CAE2A2E00D550C8 /* NNImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNImage.h; sourceTree = "<group>"; };
+		72618DC61CAE2A2E00D550C8 /* NNImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNImage.m; sourceTree = "<group>"; };
+		72618DC71CAE2A2E00D550C8 /* NNNightManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNNightManager.h; sourceTree = "<group>"; };
+		72618DC81CAE2A2E00D550C8 /* NNNightManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNNightManager.m; sourceTree = "<group>"; };
 		72618DC91CAE2A2E00D550C8 /* NSObject+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Night.h"; sourceTree = "<group>"; };
 		72618DCA1CAE2A2E00D550C8 /* NSObject+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Night.m"; sourceTree = "<group>"; };
-		72618DD41CAE2A4200D550C8 /* DKDeallocBlockExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDeallocBlockExecutor.h; sourceTree = "<group>"; };
-		72618DD51CAE2A4200D550C8 /* DKDeallocBlockExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDeallocBlockExecutor.m; sourceTree = "<group>"; };
+		72618DD41CAE2A4200D550C8 /* NNDeallocBlockExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNDeallocBlockExecutor.h; sourceTree = "<group>"; };
+		72618DD51CAE2A4200D550C8 /* NNDeallocBlockExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNDeallocBlockExecutor.m; sourceTree = "<group>"; };
 		72618DD61CAE2A4200D550C8 /* NSObject+DeallocBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeallocBlock.h"; sourceTree = "<group>"; };
 		72618DD71CAE2A4200D550C8 /* NSObject+DeallocBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeallocBlock.m"; sourceTree = "<group>"; };
-		72618E2D1CAE2A7300D550C8 /* DKNightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKNightVersion.h; path = DKNightVersion/DKNightVersion.h; sourceTree = SOURCE_ROOT; };
+		72618E2D1CAE2A7300D550C8 /* NNNightNight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NNNightNight.h; path = DKNightVersion/NNNightNight.h; sourceTree = SOURCE_ROOT; };
 		72618E301CAE2C6A00D550C8 /* UIBarButtonItem+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Night.h"; sourceTree = "<group>"; };
 		72618E311CAE2C6A00D550C8 /* UIBarButtonItem+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Night.m"; sourceTree = "<group>"; };
 		72618E321CAE2C6A00D550C8 /* UIButton+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Night.h"; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 		72BBA6A21C181B9600262693 /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
 		72EAC66F1C1AE2490063012B /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = SOURCE_ROOT; };
 		72EAC6701C1AE2490063012B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		72EAC6731C1AE2530063012B /* DKNightVersion.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKNightVersion.podspec; sourceTree = SOURCE_ROOT; };
+		72EAC6731C1AE2530063012B /* NNNightNight.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NNNightNight.podspec; sourceTree = SOURCE_ROOT; };
 		72EAC6741C1AE2530063012B /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = SOURCE_ROOT; };
 		72EAC6771C1AE25F0063012B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -244,7 +244,7 @@
 				1816313D1AFE549A00A20423 /* property.json */,
 				72EAC66F1C1AE2490063012B /* Rakefile */,
 				72EAC6701C1AE2490063012B /* README.md */,
-				72EAC6731C1AE2530063012B /* DKNightVersion.podspec */,
+				72EAC6731C1AE2530063012B /* NNNightNight.podspec */,
 				72EAC6741C1AE2530063012B /* Gemfile */,
 				72EAC6771C1AE25F0063012B /* LICENSE */,
 			);
@@ -255,7 +255,7 @@
 		189854AD1ADD5B550050568B = {
 			isa = PBXGroup;
 			children = (
-				189854B81ADD5B550050568B /* DKNightVersion */,
+				189854B81ADD5B550050568B /* NNNightNight */,
 				189854CC1ADD5B560050568B /* DKNightVersionTests */,
 				189854B71ADD5B550050568B /* Products */,
 			);
@@ -264,13 +264,13 @@
 		189854B71ADD5B550050568B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				189854B61ADD5B550050568B /* DKNightVersion.app */,
-				189854C91ADD5B560050568B /* DKNightVersionTests.xctest */,
+				189854B61ADD5B550050568B /* NNNightNight.app */,
+				189854C91ADD5B560050568B /* NNNightNight.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		189854B81ADD5B550050568B /* DKNightVersion */ = {
+		189854B81ADD5B550050568B /* NNNightNight */ = {
 			isa = PBXGroup;
 			children = (
 				1816313C1AFE549000A20423 /* MetaData */,
@@ -281,6 +281,7 @@
 				18D228A21AF8BB8500872BF1 /* LaunchScreen.xib */,
 				189854B91ADD5B550050568B /* Supporting Files */,
 			);
+			name = NNNightNight;
 			path = DKNightVersion;
 			sourceTree = "<group>";
 		};
@@ -313,7 +314,7 @@
 		18A41E211AE019F000042CF4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				72618E2D1CAE2A7300D550C8 /* DKNightVersion.h */,
+				72618E2D1CAE2A7300D550C8 /* NNNightNight.h */,
 				72618DBB1CAE2A2400D550C8 /* ColorTable */,
 				72618DC21CAE2A2E00D550C8 /* Core */,
 				72618E7A1CAE2CA600D550C8 /* CoreAnimation */,
@@ -326,9 +327,9 @@
 		72618DBB1CAE2A2400D550C8 /* ColorTable */ = {
 			isa = PBXGroup;
 			children = (
-				72618DBC1CAE2A2400D550C8 /* DKColorTable.h */,
-				72618DBD1CAE2A2400D550C8 /* DKColorTable.m */,
-				72618DBE1CAE2A2400D550C8 /* DKColorTable.txt */,
+				72618DBC1CAE2A2400D550C8 /* NNColorTable.h */,
+				72618DBD1CAE2A2400D550C8 /* NNColorTable.m */,
+				72618DBE1CAE2A2400D550C8 /* NNColorTable.txt */,
 			);
 			name = ColorTable;
 			path = DKNightVersion/ColorTable;
@@ -338,12 +339,12 @@
 			isa = PBXGroup;
 			children = (
 				72618DD31CAE2A4200D550C8 /* DeallocBlockExecutor */,
-				72618DC31CAE2A2E00D550C8 /* DKColor.h */,
-				72618DC41CAE2A2E00D550C8 /* DKColor.m */,
-				72618DC51CAE2A2E00D550C8 /* DKImage.h */,
-				72618DC61CAE2A2E00D550C8 /* DKImage.m */,
-				72618DC71CAE2A2E00D550C8 /* DKNightVersionManager.h */,
-				72618DC81CAE2A2E00D550C8 /* DKNightVersionManager.m */,
+				72618DC31CAE2A2E00D550C8 /* NNColor.h */,
+				72618DC41CAE2A2E00D550C8 /* NNColor.m */,
+				72618DC51CAE2A2E00D550C8 /* NNImage.h */,
+				72618DC61CAE2A2E00D550C8 /* NNImage.m */,
+				72618DC71CAE2A2E00D550C8 /* NNNightManager.h */,
+				72618DC81CAE2A2E00D550C8 /* NNNightManager.m */,
 				72618DC91CAE2A2E00D550C8 /* NSObject+Night.h */,
 				72618DCA1CAE2A2E00D550C8 /* NSObject+Night.m */,
 			);
@@ -354,8 +355,8 @@
 		72618DD31CAE2A4200D550C8 /* DeallocBlockExecutor */ = {
 			isa = PBXGroup;
 			children = (
-				72618DD41CAE2A4200D550C8 /* DKDeallocBlockExecutor.h */,
-				72618DD51CAE2A4200D550C8 /* DKDeallocBlockExecutor.m */,
+				72618DD41CAE2A4200D550C8 /* NNDeallocBlockExecutor.h */,
+				72618DD51CAE2A4200D550C8 /* NNDeallocBlockExecutor.m */,
 				72618DD61CAE2A4200D550C8 /* NSObject+DeallocBlock.h */,
 				72618DD71CAE2A4200D550C8 /* NSObject+DeallocBlock.m */,
 			);
@@ -496,10 +497,10 @@
 				72618DD11CAE2A2E00D550C8 /* NSObject+Night.h in Headers */,
 				72618E701CAE2C6A00D550C8 /* UITableView+Night.h in Headers */,
 				72618E571CAE2C6A00D550C8 /* UIButton+Night.h in Headers */,
-				72618DCB1CAE2A2E00D550C8 /* DKColor.h in Headers */,
+				72618DCB1CAE2A2E00D550C8 /* NNColor.h in Headers */,
 				72618E741CAE2C6A00D550C8 /* UITextView+Night.h in Headers */,
 				72618E6C1CAE2C6A00D550C8 /* UISwitch+Night.h in Headers */,
-				72618E2E1CAE2A7300D550C8 /* DKNightVersion.h in Headers */,
+				72618E2E1CAE2A7300D550C8 /* NNNightNight.h in Headers */,
 				72618E5D1CAE2C6A00D550C8 /* UIKit+Night.h in Headers */,
 				72618E641CAE2C6A00D550C8 /* UIPageControl+Night.h in Headers */,
 				72618E551CAE2C6A00D550C8 /* UIBarButtonItem+Night.h in Headers */,
@@ -508,15 +509,15 @@
 				72B53CE21C1854B20059F6A1 /* AppDelegate.h in Headers */,
 				72618E591CAE2C6A00D550C8 /* UIControl+Night.h in Headers */,
 				72618E621CAE2C6A00D550C8 /* UINavigationBar+Night.h in Headers */,
-				72618DBF1CAE2A2400D550C8 /* DKColorTable.h in Headers */,
+				72618DBF1CAE2A2400D550C8 /* NNColorTable.h in Headers */,
 				72618E681CAE2C6A00D550C8 /* UISearchBar+Night.h in Headers */,
 				72618E6E1CAE2C6A00D550C8 /* UITabBar+Night.h in Headers */,
-				72618DCD1CAE2A2E00D550C8 /* DKImage.h in Headers */,
+				72618DCD1CAE2A2E00D550C8 /* NNImage.h in Headers */,
 				72618E5E1CAE2C6A00D550C8 /* UILabel+Night.h in Headers */,
-				72618DFF1CAE2A4200D550C8 /* DKDeallocBlockExecutor.h in Headers */,
+				72618DFF1CAE2A4200D550C8 /* NNDeallocBlockExecutor.h in Headers */,
 				72618E5B1CAE2C6A00D550C8 /* UIImageView+Night.h in Headers */,
 				72618E761CAE2C6A00D550C8 /* UIToolbar+Night.h in Headers */,
-				72618DCF1CAE2A2E00D550C8 /* DKNightVersionManager.h in Headers */,
+				72618DCF1CAE2A2E00D550C8 /* NNNightManager.h in Headers */,
 				72618E661CAE2C6A00D550C8 /* UIProgressView+Night.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,9 +532,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		189854B51ADD5B550050568B /* DKNightVersion */ = {
+		189854B51ADD5B550050568B /* NNNightNight */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 189854D31ADD5B560050568B /* Build configuration list for PBXNativeTarget "DKNightVersion" */;
+			buildConfigurationList = 189854D31ADD5B560050568B /* Build configuration list for PBXNativeTarget "NNNightNight" */;
 			buildPhases = (
 				189854B21ADD5B550050568B /* Sources */,
 				189854B31ADD5B550050568B /* Frameworks */,
@@ -545,14 +546,14 @@
 			);
 			dependencies = (
 			);
-			name = DKNightVersion;
+			name = NNNightNight;
 			productName = DKNightVersion;
-			productReference = 189854B61ADD5B550050568B /* DKNightVersion.app */;
+			productReference = 189854B61ADD5B550050568B /* NNNightNight.app */;
 			productType = "com.apple.product-type.application";
 		};
-		189854C81ADD5B560050568B /* DKNightVersionTests */ = {
+		189854C81ADD5B560050568B /* NNNightNightTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 189854D61ADD5B560050568B /* Build configuration list for PBXNativeTarget "DKNightVersionTests" */;
+			buildConfigurationList = 189854D61ADD5B560050568B /* Build configuration list for PBXNativeTarget "NNNightNightTests" */;
 			buildPhases = (
 				189854C51ADD5B560050568B /* Sources */,
 				189854C61ADD5B560050568B /* Frameworks */,
@@ -564,9 +565,9 @@
 			dependencies = (
 				189854CB1ADD5B560050568B /* PBXTargetDependency */,
 			);
-			name = DKNightVersionTests;
+			name = NNNightNightTests;
 			productName = DKNightVersionTests;
-			productReference = 189854C91ADD5B560050568B /* DKNightVersionTests.xctest */;
+			productReference = 189854C91ADD5B560050568B /* NNNightNight.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -587,7 +588,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 189854B11ADD5B550050568B /* Build configuration list for PBXProject "DKNightVersion" */;
+			buildConfigurationList = 189854B11ADD5B550050568B /* Build configuration list for PBXProject "NNNightNight" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -600,8 +601,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				189854B51ADD5B550050568B /* DKNightVersion */,
-				189854C81ADD5B560050568B /* DKNightVersionTests */,
+				189854B51ADD5B550050568B /* NNNightNight */,
+				189854C81ADD5B560050568B /* NNNightNightTests */,
 			);
 		};
 /* End PBXProject section */
@@ -614,7 +615,7 @@
 				72BBA6A31C181B9600262693 /* method.json in Resources */,
 				72BBA6A61C181B9600262693 /* objc_class.rb in Resources */,
 				18D228A71AF8BC1A00872BF1 /* LaunchScreen.xib in Resources */,
-				72618DC11CAE2A2400D550C8 /* DKColorTable.txt in Resources */,
+				72618DC11CAE2A2400D550C8 /* NNColorTable.txt in Resources */,
 				72BBA6AB1C181B9600262693 /* color.h.erb in Resources */,
 				72BBA6AA1C181B9600262693 /* render.rb in Resources */,
 				72BBA6A51C181B9600262693 /* superklass.json in Resources */,
@@ -667,7 +668,7 @@
 				72618E021CAE2A4200D550C8 /* NSObject+DeallocBlock.m in Sources */,
 				72618E751CAE2C6A00D550C8 /* UITextView+Night.m in Sources */,
 				72618E631CAE2C6A00D550C8 /* UINavigationBar+Night.m in Sources */,
-				72618E001CAE2A4200D550C8 /* DKDeallocBlockExecutor.m in Sources */,
+				72618E001CAE2A4200D550C8 /* NNDeallocBlockExecutor.m in Sources */,
 				72618E791CAE2C6A00D550C8 /* UIView+Night.m in Sources */,
 				72B53CE71C1854B20059F6A1 /* SuccViewController.m in Sources */,
 				72B53CE91C1854B20059F6A1 /* TableViewCell.m in Sources */,
@@ -682,16 +683,16 @@
 				72618E651CAE2C6A00D550C8 /* UIPageControl+Night.m in Sources */,
 				72618E5A1CAE2C6A00D550C8 /* UIControl+Night.m in Sources */,
 				72618E581CAE2C6A00D550C8 /* UIButton+Night.m in Sources */,
-				72618DD01CAE2A2E00D550C8 /* DKNightVersionManager.m in Sources */,
+				72618DD01CAE2A2E00D550C8 /* NNNightManager.m in Sources */,
 				72618E5C1CAE2C6A00D550C8 /* UIImageView+Night.m in Sources */,
 				72618E6B1CAE2C6A00D550C8 /* UISlider+Night.m in Sources */,
-				72618DCC1CAE2A2E00D550C8 /* DKColor.m in Sources */,
-				72618DCE1CAE2A2E00D550C8 /* DKImage.m in Sources */,
+				72618DCC1CAE2A2E00D550C8 /* NNColor.m in Sources */,
+				72618DCE1CAE2A2E00D550C8 /* NNImage.m in Sources */,
 				72618E691CAE2C6A00D550C8 /* UISearchBar+Night.m in Sources */,
 				72618E6F1CAE2C6A00D550C8 /* UITabBar+Night.m in Sources */,
 				72618E771CAE2C6A00D550C8 /* UIToolbar+Night.m in Sources */,
 				72618DD21CAE2A2E00D550C8 /* NSObject+Night.m in Sources */,
-				72618DC01CAE2A2400D550C8 /* DKColorTable.m in Sources */,
+				72618DC01CAE2A2400D550C8 /* NNColorTable.m in Sources */,
 				72618E671CAE2C6A00D550C8 /* UIProgressView+Night.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,7 +710,7 @@
 /* Begin PBXTargetDependency section */
 		189854CB1ADD5B560050568B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 189854B51ADD5B550050568B /* DKNightVersion */;
+			target = 189854B51ADD5B550050568B /* NNNightNight */;
 			targetProxy = 189854CA1ADD5B560050568B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -819,7 +820,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draven.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NNNightNight;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -835,7 +836,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draven.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NNNightNight;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
@@ -855,7 +856,7 @@
 				INFOPLIST_FILE = DKNightVersionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draven.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NNNightNight;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -871,7 +872,7 @@
 				INFOPLIST_FILE = DKNightVersionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draven.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NNNightNight;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -879,7 +880,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		189854B11ADD5B550050568B /* Build configuration list for PBXProject "DKNightVersion" */ = {
+		189854B11ADD5B550050568B /* Build configuration list for PBXProject "NNNightNight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				189854D11ADD5B560050568B /* Debug */,
@@ -888,7 +889,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		189854D31ADD5B560050568B /* Build configuration list for PBXNativeTarget "DKNightVersion" */ = {
+		189854D31ADD5B560050568B /* Build configuration list for PBXNativeTarget "NNNightNight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				189854D41ADD5B560050568B /* Debug */,
@@ -897,7 +898,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		189854D61ADD5B560050568B /* Build configuration list for PBXNativeTarget "DKNightVersionTests" */ = {
+		189854D61ADD5B560050568B /* Build configuration list for PBXNativeTarget "NNNightNightTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				189854D71ADD5B560050568B /* Debug */,

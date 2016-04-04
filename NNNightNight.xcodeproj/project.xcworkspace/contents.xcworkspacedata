@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DKNightVersion.xcodeproj">
+      location = "self:/Users/apple/Desktop/workspace/DKNightVersion/NNNightNight.xcodeproj">
    </FileRef>
 </Workspace>

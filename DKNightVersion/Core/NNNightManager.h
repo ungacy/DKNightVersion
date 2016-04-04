@@ -1,14 +1,14 @@
 //
-//  DKNightVersionManager.h
-//  DKNightVersionManager
+//  NNNightManager.h
+//  NNNightManager
 //
 //  Created by Draveness on 4/14/15.
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "DKColor.h"
-#import "DKImage.h"
+#import "NNColor.h"
+#import "NNImage.h"
 
 /**
  *  DKThemeVersion is just a alias to string, use `- isEqualToString` to
@@ -30,22 +30,22 @@ extern DKThemeVersion * const DKThemeVersionNight;
 
 /**
  *  This notification will post, every time you change current theme version
- *  of DKNightVersionManager glbal instance.
+ *  of NNNightManager glbal instance.
  */
-extern NSString * const DKNightVersionThemeChangingNotificaiton;
+extern NSString * const NNNightNightThemeChangingNotificaiton;
 
 /**
  *  When change theme version, it will gives us a smooth animation. And this
  *  is the duration for this animation.
  */
-extern CGFloat const DKNightVersionAnimationDuration;
+extern CGFloat const NNNightNightAnimationDuration;
 
 /**
- *  DKNightVersionManager is the core class for DKNightVersion, it manages all
+ *  NNNightManager is the core class for NNNightNight, it manages all
  *  the different themes in the color table. Use `- sharedInstance` instead of 
  *  `- init` to get an instance.
  */
-@interface DKNightVersionManager : NSObject
+@interface NNNightManager : NSObject
 
 /**
  *  if `changeStatusBar` is set to `YES`, the status bar will change to `UIStatusBarStyleLightContent` when invoke `+ nightFalling` and `UIStatusBarStyleDefault` for `+ dawnComing`. if you would like to use `-[UIViewController preferredStatusBarStyle]`, set this value to `NO`. Default to `YES`
@@ -54,13 +54,13 @@ extern CGFloat const DKNightVersionAnimationDuration;
 
 /**
  *  Current ThemeVersion, default is DKThemeVersionNormal, change it to change the global
- *  theme, this will post `DKNightVersionThemeChangingNotificaiton`, if you want to customize
+ *  theme, this will post `NNNightNightThemeChangingNotificaiton`, if you want to customize
  *  your theme you can observe this notification.
  *  
  *  Ex:
  *
  *      ```objectivec
- *          DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
+ *          NNNightManager *manager = [NNNightManager sharedManager];
  *          manager.themeVersion = @"RED"; // DKThemeVersionNormal or DKThemeVersionNight
  *      ```
  *
@@ -70,29 +70,29 @@ extern CGFloat const DKNightVersionAnimationDuration;
 /**
  *  Return the shared night version manager instance
  *
- *  @return singleton instance for DKNightVersionManager
+ *  @return singleton instance for NNNightManager
  */
-+ (DKNightVersionManager *)sharedManager;
++ (NNNightManager *)sharedManager;
 
 /**
- *  Night falling. When nightFalling is called, post `DKNightVersionThemeChangingNotificaiton`.
+ *  Night falling. When nightFalling is called, post `NNNightNightThemeChangingNotificaiton`.
  *  You can setup customize with observing the notification. `themeVersion` of the manager will
- *  be set to `DKNightVersionNight`. This is a convinient method for switching theme the
+ *  be set to `NNNightNightNight`. This is a convinient method for switching theme the
  *  `DKThemeVersionNight`.
  */
 + (void)nightFalling;
 
 /**
- *  Dawn coming. When dawnComing is called, post `DKNightVersionThemeChangingNotificaiton`.
+ *  Dawn coming. When dawnComing is called, post `NNNightNightThemeChangingNotificaiton`.
  *  You can setup customize with observing the notification.`themeVersion` of the manager will
- *  be set to `DKNightVersionNormal`. This is a convinient method for switching theme the
+ *  be set to `NNNightNightNormal`. This is a convinient method for switching theme the
  *  `DKThemeVersionNormal`.
  */
 + (void)dawnComing;
 
 /** 
- *  This method is deprecated, use `- [DKNightVersion sharedManager]` instead
+ *  This method is deprecated, use `- [NNNightNight sharedManager]` instead
  */
-+ (DKNightVersionManager *)sharedNightVersionManager __deprecated_msg("use `- [DKNightVersion sharedManager]` instead");
++ (NNNightManager *)sharedNightVersionManager __deprecated_msg("use `- [NNNightNight sharedManager]` instead");
 
 @end

@@ -13,7 +13,7 @@
 
 @interface UIView (Night)
 
-@property (nonatomic, copy, setter = dk_setBackgroundColorPicker:) DKColorPicker dk_backgroundColorPicker;
-@property (nonatomic, copy, setter = dk_setTintColorPicker:) DKColorPicker dk_tintColorPicker;
+@property (nonatomic, copy, setter = dk_setBackgroundColorPicker:) NNColorPicker dk_backgroundColorPicker;
+@property (nonatomic, copy, setter = dk_setTintColorPicker:) NNColorPicker dk_tintColorPicker;
 
 @end

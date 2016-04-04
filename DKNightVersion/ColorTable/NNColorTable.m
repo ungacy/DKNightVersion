@@ -1,31 +1,31 @@
 //
-//  DKColorTable.m
-//  DKNightVersion
+//  NNColorTable.m
+//  NNNightNight
 //
 //  Created by Draveness on 15/12/11.
 //  Copyright © 2015年 DeltaX. All rights reserved.
 //
 
-#import "DKColorTable.h"
+#import "NNColorTable.h"
 
-@interface DKColorTable ()
+@interface NNColorTable ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSMutableDictionary<NSString *, UIColor *> *> *table;
 
 @end
 
-@implementation DKColorTable
+@implementation NNColorTable
 
 UIColor *colorFromRGB(NSUInteger hex) {
     return [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:1.0];
 }
 
 + (instancetype)sharedColorTable {
-    static DKColorTable *sharedInstance = nil;
+    static NNColorTable *sharedInstance = nil;
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
-        sharedInstance = [[DKColorTable alloc] init];
-        sharedInstance.file = @"DKColorTable.txt";
+        sharedInstance = [[NNColorTable alloc] init];
+        sharedInstance.file = @"NNColorTable.txt";
     });
     return sharedInstance;
 }
@@ -44,7 +44,7 @@ UIColor *colorFromRGB(NSUInteger hex) {
     if (error)
         NSLog(@"Error reading file: %@", error.localizedDescription);
 
-    NSLog(@"DKColorTable:\n%@", fileContents);
+    NSLog(@"NNColorTable:\n%@", fileContents);
 
 
     NSMutableArray *entries = [[fileContents componentsSeparatedByString:@"\n"] mutableCopy];
@@ -92,11 +92,11 @@ UIColor *colorFromRGB(NSUInteger hex) {
     [self.table setValue:themeToColorDictionary forKey:key];
 }
 
-- (DKColorPicker)pickerWithKey:(NSString *)key {
+- (NNColorPicker)pickerWithKey:(NSString *)key {
     NSAssert(key != nil, @"Parameter key must not be nil");
     NSDictionary *themeToColorDictionary = [self.table valueForKey:key];
-    DKColorPicker picker = ^() {
-        return [themeToColorDictionary valueForKey:[[DKNightVersionManager sharedManager] themeVersion]];
+    NNColorPicker picker = ^() {
+        return [themeToColorDictionary valueForKey:[[NNNightManager sharedManager] themeVersion]];
     };
     return picker;
 
