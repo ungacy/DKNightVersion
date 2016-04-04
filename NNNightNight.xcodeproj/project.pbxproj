@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		186AC5221AF855410095ED95 /* DKNightVersionManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */; };
+		186AC5221AF855410095ED95 /* NNNightManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AC5211AF855410095ED95 /* NNNightManagerTest.m */; };
 		18D228A11AF8BB7800872BF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2289F1AF8BB7800872BF1 /* main.m */; };
 		18D228A61AF8BB8D00872BF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D228A51AF8BB8D00872BF1 /* Images.xcassets */; };
 		18D228A71AF8BC1A00872BF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D228A21AF8BB8500872BF1 /* LaunchScreen.xib */; };
@@ -104,7 +104,7 @@
 		1816313D1AFE549A00A20423 /* property.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = property.json; sourceTree = SOURCE_ROOT; };
 		182BCC231AFF199A0095BF9C /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresentingViewController.h; path = Demo/PresentingViewController.h; sourceTree = SOURCE_ROOT; };
 		182BCC241AFF199A0095BF9C /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresentingViewController.m; path = Demo/PresentingViewController.m; sourceTree = SOURCE_ROOT; };
-		186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionManagerTest.m; sourceTree = "<group>"; };
+		186AC5211AF855410095ED95 /* NNNightManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNNightManagerTest.m; sourceTree = "<group>"; };
 		189854B61ADD5B550050568B /* NNNightNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNNightNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854C91ADD5B560050568B /* NNNightNight.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NNNightNight.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854CE1ADD5B560050568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -256,7 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				189854B81ADD5B550050568B /* NNNightNight */,
-				189854CC1ADD5B560050568B /* DKNightVersionTests */,
+				189854CC1ADD5B560050568B /* NNNightNightTests */,
 				189854B71ADD5B550050568B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -294,12 +294,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		189854CC1ADD5B560050568B /* DKNightVersionTests */ = {
+		189854CC1ADD5B560050568B /* NNNightNightTests */ = {
 			isa = PBXGroup;
 			children = (
-				186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */,
+				186AC5211AF855410095ED95 /* NNNightManagerTest.m */,
 				189854CD1ADD5B560050568B /* Supporting Files */,
 			);
+			name = NNNightNightTests;
 			path = DKNightVersionTests;
 			sourceTree = "<group>";
 		};
@@ -701,7 +702,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				186AC5221AF855410095ED95 /* DKNightVersionManagerTest.m in Sources */,
+				186AC5221AF855410095ED95 /* NNNightManagerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
