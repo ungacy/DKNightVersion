@@ -33,3 +33,28 @@
 """ %><% end %>
 
 @end
+
+@implementation <%= klass.name %> (IBInspectable)
+
+<% klass.properties.each do |property| %><%= """
+- (UIColor *)normal#{property.cap_name} {
+    return objc_getAssociatedObject(self, @selector(normal#{property.cap_name}));
+}
+
+- (void)setNormal#{property.cap_name}:(UIColor *)normal#{property.cap_name} {
+    objc_setAssociatedObject(self, @selector(normal#{property.cap_name}), normal#{property.cap_name}, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+""" %><% end %>
+
+<% klass.properties.each do |property| %><%= """
+- (UIColor *)night#{property.cap_name} {
+    return objc_getAssociatedObject(self, @selector(night#{property.cap_name}));
+}
+
+- (void)setNight#{property.cap_name}:(UIColor *)night#{property.cap_name} {
+    objc_setAssociatedObject(self, @selector(night#{property.cap_name}), night#{property.cap_name}, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+""" %><% end %>
+
+
+@end
