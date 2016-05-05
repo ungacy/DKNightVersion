@@ -33,3 +33,24 @@
 
 
 @end
+
+@implementation UISearchBar (Inspectable)
+
+- (UIColor *)normalBarTintColor {
+    return objc_getAssociatedObject(self, @selector(normalBarTintColor));
+}
+
+- (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
+    objc_setAssociatedObject(self, @selector(normalBarTintColor), normalBarTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+- (UIColor *)nightBarTintColor {
+    return objc_getAssociatedObject(self, @selector(nightBarTintColor));
+}
+
+- (void)setNightBarTintColor:(UIColor *)nightBarTintColor {
+    objc_setAssociatedObject(self, @selector(nightBarTintColor), nightBarTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+@end

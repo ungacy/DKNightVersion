@@ -43,3 +43,40 @@
 
 
 @end
+
+@implementation UIProgressView (Inspectable)
+
+- (UIColor *)normalProgressTintColor {
+    return objc_getAssociatedObject(self, @selector(normalProgressTintColor));
+}
+
+- (void)setNormalProgressTintColor:(UIColor *)normalProgressTintColor {
+    objc_setAssociatedObject(self, @selector(normalProgressTintColor), normalProgressTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)normalTrackTintColor {
+    return objc_getAssociatedObject(self, @selector(normalTrackTintColor));
+}
+
+- (void)setNormalTrackTintColor:(UIColor *)normalTrackTintColor {
+    objc_setAssociatedObject(self, @selector(normalTrackTintColor), normalTrackTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+- (UIColor *)nightProgressTintColor {
+    return objc_getAssociatedObject(self, @selector(nightProgressTintColor));
+}
+
+- (void)setNightProgressTintColor:(UIColor *)nightProgressTintColor {
+    objc_setAssociatedObject(self, @selector(nightProgressTintColor), nightProgressTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)nightTrackTintColor {
+    return objc_getAssociatedObject(self, @selector(nightTrackTintColor));
+}
+
+- (void)setNightTrackTintColor:(UIColor *)nightTrackTintColor {
+    objc_setAssociatedObject(self, @selector(nightTrackTintColor), nightTrackTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+@end

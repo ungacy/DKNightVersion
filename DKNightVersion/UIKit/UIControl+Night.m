@@ -33,3 +33,24 @@
 
 
 @end
+
+@implementation UIControl (Inspectable)
+
+- (UIColor *)normalTintColor {
+    return objc_getAssociatedObject(self, @selector(normalTintColor));
+}
+
+- (void)setNormalTintColor:(UIColor *)normalTintColor {
+    objc_setAssociatedObject(self, @selector(normalTintColor), normalTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+- (UIColor *)nightTintColor {
+    return objc_getAssociatedObject(self, @selector(nightTintColor));
+}
+
+- (void)setNightTintColor:(UIColor *)nightTintColor {
+    objc_setAssociatedObject(self, @selector(nightTintColor), nightTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+@end

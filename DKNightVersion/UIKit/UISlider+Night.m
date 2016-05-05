@@ -53,3 +53,56 @@
 
 
 @end
+
+@implementation UISlider (Inspectable)
+
+- (UIColor *)normalMinimumTrackTintColor {
+    return objc_getAssociatedObject(self, @selector(normalMinimumTrackTintColor));
+}
+
+- (void)setNormalMinimumTrackTintColor:(UIColor *)normalMinimumTrackTintColor {
+    objc_setAssociatedObject(self, @selector(normalMinimumTrackTintColor), normalMinimumTrackTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)normalMaximumTrackTintColor {
+    return objc_getAssociatedObject(self, @selector(normalMaximumTrackTintColor));
+}
+
+- (void)setNormalMaximumTrackTintColor:(UIColor *)normalMaximumTrackTintColor {
+    objc_setAssociatedObject(self, @selector(normalMaximumTrackTintColor), normalMaximumTrackTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)normalThumbTintColor {
+    return objc_getAssociatedObject(self, @selector(normalThumbTintColor));
+}
+
+- (void)setNormalThumbTintColor:(UIColor *)normalThumbTintColor {
+    objc_setAssociatedObject(self, @selector(normalThumbTintColor), normalThumbTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+- (UIColor *)nightMinimumTrackTintColor {
+    return objc_getAssociatedObject(self, @selector(nightMinimumTrackTintColor));
+}
+
+- (void)setNightMinimumTrackTintColor:(UIColor *)nightMinimumTrackTintColor {
+    objc_setAssociatedObject(self, @selector(nightMinimumTrackTintColor), nightMinimumTrackTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)nightMaximumTrackTintColor {
+    return objc_getAssociatedObject(self, @selector(nightMaximumTrackTintColor));
+}
+
+- (void)setNightMaximumTrackTintColor:(UIColor *)nightMaximumTrackTintColor {
+    objc_setAssociatedObject(self, @selector(nightMaximumTrackTintColor), nightMaximumTrackTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)nightThumbTintColor {
+    return objc_getAssociatedObject(self, @selector(nightThumbTintColor));
+}
+
+- (void)setNightThumbTintColor:(UIColor *)nightThumbTintColor {
+    objc_setAssociatedObject(self, @selector(nightThumbTintColor), nightThumbTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+@end

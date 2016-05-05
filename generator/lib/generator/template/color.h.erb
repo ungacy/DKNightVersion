@@ -16,9 +16,8 @@
 <% klass.properties.each do |property| %><%= "@property (nonatomic, copy, setter = dk_set#{property.cap_name}Picker:) DKColorPicker dk_#{property.name}Picker;\n"%><% end %>
 @end
 
-@interface <%= klass.name %> (IBInspectable)
+@interface <%= klass.name %> (Inspectable)
 
 <% klass.properties.each do |property| %><%= "@property (nonatomic, strong) IBInspectable UIColor *normal#{property.cap_name};\n"%><% end %>
 <% klass.properties.each do |property| %><%= "@property (nonatomic, strong) IBInspectable UIColor *night#{property.cap_name};\n"%><% end %>
-
 @end

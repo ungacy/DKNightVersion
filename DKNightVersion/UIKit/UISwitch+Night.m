@@ -43,3 +43,40 @@
 
 
 @end
+
+@implementation UISwitch (Inspectable)
+
+- (UIColor *)normalOnTintColor {
+    return objc_getAssociatedObject(self, @selector(normalOnTintColor));
+}
+
+- (void)setNormalOnTintColor:(UIColor *)normalOnTintColor {
+    objc_setAssociatedObject(self, @selector(normalOnTintColor), normalOnTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)normalThumbTintColor {
+    return objc_getAssociatedObject(self, @selector(normalThumbTintColor));
+}
+
+- (void)setNormalThumbTintColor:(UIColor *)normalThumbTintColor {
+    objc_setAssociatedObject(self, @selector(normalThumbTintColor), normalThumbTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+- (UIColor *)nightOnTintColor {
+    return objc_getAssociatedObject(self, @selector(nightOnTintColor));
+}
+
+- (void)setNightOnTintColor:(UIColor *)nightOnTintColor {
+    objc_setAssociatedObject(self, @selector(nightOnTintColor), nightOnTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)nightThumbTintColor {
+    return objc_getAssociatedObject(self, @selector(nightThumbTintColor));
+}
+
+- (void)setNightThumbTintColor:(UIColor *)nightThumbTintColor {
+    objc_setAssociatedObject(self, @selector(nightThumbTintColor), nightThumbTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+@end

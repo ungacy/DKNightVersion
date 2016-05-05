@@ -33,3 +33,24 @@
 
 
 @end
+
+@implementation UITableView (Inspectable)
+
+- (UIColor *)normalSeparatorColor {
+    return objc_getAssociatedObject(self, @selector(normalSeparatorColor));
+}
+
+- (void)setNormalSeparatorColor:(UIColor *)normalSeparatorColor {
+    objc_setAssociatedObject(self, @selector(normalSeparatorColor), normalSeparatorColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+- (UIColor *)nightSeparatorColor {
+    return objc_getAssociatedObject(self, @selector(nightSeparatorColor));
+}
+
+- (void)setNightSeparatorColor:(UIColor *)nightSeparatorColor {
+    objc_setAssociatedObject(self, @selector(nightSeparatorColor), nightSeparatorColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+@end

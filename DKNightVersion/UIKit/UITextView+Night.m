@@ -33,3 +33,24 @@
 
 
 @end
+
+@implementation UITextView (Inspectable)
+
+- (UIColor *)normalTextColor {
+    return objc_getAssociatedObject(self, @selector(normalTextColor));
+}
+
+- (void)setNormalTextColor:(UIColor *)normalTextColor {
+    objc_setAssociatedObject(self, @selector(normalTextColor), normalTextColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+- (UIColor *)nightTextColor {
+    return objc_getAssociatedObject(self, @selector(nightTextColor));
+}
+
+- (void)setNightTextColor:(UIColor *)nightTextColor {
+    objc_setAssociatedObject(self, @selector(nightTextColor), nightTextColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+@end

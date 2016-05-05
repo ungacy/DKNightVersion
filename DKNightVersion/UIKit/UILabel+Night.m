@@ -53,3 +53,56 @@
 
 
 @end
+
+@implementation UILabel (Inspectable)
+
+- (UIColor *)normalTextColor {
+    return objc_getAssociatedObject(self, @selector(normalTextColor));
+}
+
+- (void)setNormalTextColor:(UIColor *)normalTextColor {
+    objc_setAssociatedObject(self, @selector(normalTextColor), normalTextColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)normalShadowColor {
+    return objc_getAssociatedObject(self, @selector(normalShadowColor));
+}
+
+- (void)setNormalShadowColor:(UIColor *)normalShadowColor {
+    objc_setAssociatedObject(self, @selector(normalShadowColor), normalShadowColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)normalHighlightedTextColor {
+    return objc_getAssociatedObject(self, @selector(normalHighlightedTextColor));
+}
+
+- (void)setNormalHighlightedTextColor:(UIColor *)normalHighlightedTextColor {
+    objc_setAssociatedObject(self, @selector(normalHighlightedTextColor), normalHighlightedTextColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+- (UIColor *)nightTextColor {
+    return objc_getAssociatedObject(self, @selector(nightTextColor));
+}
+
+- (void)setNightTextColor:(UIColor *)nightTextColor {
+    objc_setAssociatedObject(self, @selector(nightTextColor), nightTextColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)nightShadowColor {
+    return objc_getAssociatedObject(self, @selector(nightShadowColor));
+}
+
+- (void)setNightShadowColor:(UIColor *)nightShadowColor {
+    objc_setAssociatedObject(self, @selector(nightShadowColor), nightShadowColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)nightHighlightedTextColor {
+    return objc_getAssociatedObject(self, @selector(nightHighlightedTextColor));
+}
+
+- (void)setNightHighlightedTextColor:(UIColor *)nightHighlightedTextColor {
+    objc_setAssociatedObject(self, @selector(nightHighlightedTextColor), nightHighlightedTextColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+@end

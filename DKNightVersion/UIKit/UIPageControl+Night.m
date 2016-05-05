@@ -43,3 +43,40 @@
 
 
 @end
+
+@implementation UIPageControl (Inspectable)
+
+- (UIColor *)normalPageIndicatorTintColor {
+    return objc_getAssociatedObject(self, @selector(normalPageIndicatorTintColor));
+}
+
+- (void)setNormalPageIndicatorTintColor:(UIColor *)normalPageIndicatorTintColor {
+    objc_setAssociatedObject(self, @selector(normalPageIndicatorTintColor), normalPageIndicatorTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)normalCurrentPageIndicatorTintColor {
+    return objc_getAssociatedObject(self, @selector(normalCurrentPageIndicatorTintColor));
+}
+
+- (void)setNormalCurrentPageIndicatorTintColor:(UIColor *)normalCurrentPageIndicatorTintColor {
+    objc_setAssociatedObject(self, @selector(normalCurrentPageIndicatorTintColor), normalCurrentPageIndicatorTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+- (UIColor *)nightPageIndicatorTintColor {
+    return objc_getAssociatedObject(self, @selector(nightPageIndicatorTintColor));
+}
+
+- (void)setNightPageIndicatorTintColor:(UIColor *)nightPageIndicatorTintColor {
+    objc_setAssociatedObject(self, @selector(nightPageIndicatorTintColor), nightPageIndicatorTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIColor *)nightCurrentPageIndicatorTintColor {
+    return objc_getAssociatedObject(self, @selector(nightCurrentPageIndicatorTintColor));
+}
+
+- (void)setNightCurrentPageIndicatorTintColor:(UIColor *)nightCurrentPageIndicatorTintColor {
+    objc_setAssociatedObject(self, @selector(nightCurrentPageIndicatorTintColor), nightCurrentPageIndicatorTintColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+@end
