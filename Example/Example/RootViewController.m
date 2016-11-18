@@ -22,6 +22,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    /*
+     * DKFontTable.txt is like this:
+     *
+     *  Ex1:
+     *
+     *      NORMAL   NIGHT   RED
+     *      #S:25    #R:20   #S:25    SOME_REGULAR_FONT
+     *      #S:18    #S:18   #S:18    SOME_SEMIBOLD_FONT
+     */
+    NSDictionary *fontMapping = @{@"#R":@"PingFangSC-Regular",
+                                  @"#S":@"PingFangSC-Semibold",
+                                  @"#L":@"PingFangSC-Light",
+                                  @"#M":@"PingFangSC-Medium",
+                                  };
+    [[DKFontTable sharedFontTable] setGenerator:^UIFont *(NSString *fontElement) {
+        NSArray *fontElememtArray = [fontElement componentsSeparatedByString:@":"];
+        NSAssert([fontElememtArray count] >= 2, @"Failed to parse font!");
+        NSString *abbrFontName = [fontElememtArray firstObject];
+        CGFloat fontSize = [fontElememtArray[1] floatValue];
+        NSString *fontName = fontMapping[abbrFontName];
+        UIFont *font = [UIFont fontWithName:fontName size:fontSize];
+        return font;
+    }];
+    
+    /*
+     //DKFontTable.txt is like this:
+     //
+     // Ex2:
+     //
+     //     NORMAL                   NIGHT                   RED
+     //     PingFangSC-Light@25    PingFangSC-Semibold@26   PingFangSC-Regular@25    SOME_DEMO_FONT
+     //
+     
+     [[DKFontTable sharedFontTable] setGenerator:^UIFont *(NSString *fontElement) {
+         NSArray *fontElememtArray = [fontElement componentsSeparatedByString:@"@"];
+         NSAssert([fontElememtArray count] >= 2, @"Failed to parse font!");
+         NSString *fontName = [fontElememtArray firstObject];
+         CGFloat fontSize = [[fontElememtArray lastObject] floatValue];
+         UIFont *font = [UIFont fontWithName:fontName size:fontSize];
+         return font;
+     }];
+     */
+    
+    [DKFontTable sharedFontTable].file = @"DKFontTable.txt";
+    
     [self.tableView registerClass:[TableViewCell class] forCellReuseIdentifier:@"Cell"];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     UILabel *navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 375, 44)];

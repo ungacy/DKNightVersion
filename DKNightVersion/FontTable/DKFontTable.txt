@@ -1,0 +1,9 @@
+NORMAL    NIGHT    RED
+
+#S:25     #R:20    #S:25        SOME_REGULAR_FONT
+#S:18     #S:18    #S:18        SOME_SEMIBOLD_FONT
+#L:18     #L:18    #L:18        SOME_LIGHT_FONT
+#M:18     #M:18    #M:18        SOME_MEDIUM_FONT
+
+
+  

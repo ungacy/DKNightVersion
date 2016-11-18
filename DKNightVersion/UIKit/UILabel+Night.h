@@ -16,5 +16,6 @@
 @property (nonatomic, copy, setter = dk_setTextColorPicker:) DKColorPicker dk_textColorPicker;
 @property (nonatomic, copy, setter = dk_setShadowColorPicker:) DKColorPicker dk_shadowColorPicker;
 @property (nonatomic, copy, setter = dk_setHighlightedTextColorPicker:) DKColorPicker dk_highlightedTextColorPicker;
+@property (nonatomic, copy, setter = dk_setFontPicker:) DKFontPicker dk_fontPicker;
 
 @end

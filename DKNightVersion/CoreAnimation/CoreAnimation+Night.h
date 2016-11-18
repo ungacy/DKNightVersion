@@ -10,5 +10,6 @@
 #define CoreAnimation_Night_h
 
 #import "CALayer+Night.h"
+#import "CAShapeLayer+Night.h"
 
 #endif /* CoreAnimation_Night_h */

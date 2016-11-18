@@ -51,5 +51,14 @@
     [self.pickers setValue:[picker copy] forKey:@"setHighlightedTextColor:"];
 }
 
+- (DKFontPicker)dk_fontPicker {
+    return objc_getAssociatedObject(self, @selector(dk_fontPicker));
+}
+
+- (void)dk_setFontPicker:(DKFontPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_fontPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    self.font = picker(self.dk_manager.themeVersion);
+    [self.pickers setValue:[picker copy] forKey:@"setFont:"];
+}
 
 @end

@@ -22,11 +22,13 @@ FOUNDATION_EXPORT const unsigned char DKNightVersionVersionString[];
 #import <objc/runtime.h>
 
 #import <DKNightVersion/DKColor.h>
+#import <DKNightVersion/DKFont.h>
 #import <DKNightVersion/DKImage.h>
 #import <DKNightVersion/DKNightVersionManager.h>
 #import <DKNightVersion/NSObject+Night.h>
 
 #import <DKNightVersion/DKColorTable.h>
+#import <DKNightVersion/DKFontTable.h>
 
 #import <DKNightVersion/CoreAnimation+Night.h>
 

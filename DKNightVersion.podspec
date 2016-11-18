@@ -16,10 +16,9 @@ Pod::Spec.new do |s|
   s.source_files = "DKNightVersion/DKNightVersion.h"
 
   s.public_header_files = "DKNightVersion/DKNightVersion.h"
-  s.resource = "DKNightVersion/ColorTable/DKColorTable.txt"
-
+  s.resources = "DKNightVersion/ColorTable/DKColorTable.txt","DKNightVersion/FontTable/DKFontTable.txt"
   s.subspec 'Core' do |ss|
-    ss.source_files = "DKNightVersion/Core/*.{h,m}", "DKNightVersion/ColorTable/*{h,m}"
+    ss.source_files = "DKNightVersion/Core/*.{h,m}", "DKNightVersion/ColorTable/*{h,m}", "DKNightVersion/FontTable/*{h,m}"
 
     ss.subspec 'DeallocBlockExecutor' do |sss|
         sss.source_files = "DKNightVersion/DeallocBlockExecutor/*.{h,m}"

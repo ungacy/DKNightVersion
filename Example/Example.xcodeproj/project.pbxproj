@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340AE8081DDDC90C00CF99D7 /* DKFontTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 340AE8071DDDC90C00CF99D7 /* DKFontTable.txt */; };
 		7261ADF91CB9FB2D007E283C /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF21CB9FB2D007E283C /* PresentingViewController.m */; };
 		7261ADFA1CB9FB2D007E283C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF41CB9FB2D007E283C /* RootViewController.m */; };
 		7261ADFB1CB9FB2D007E283C /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF61CB9FB2D007E283C /* SuccViewController.m */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		340AE8071DDDC90C00CF99D7 /* DKFontTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DKFontTable.txt; path = ../../DKNightVersion/FontTable/DKFontTable.txt; sourceTree = "<group>"; };
 		7261ADF11CB9FB2D007E283C /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingViewController.h; sourceTree = "<group>"; };
 		7261ADF21CB9FB2D007E283C /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingViewController.m; sourceTree = "<group>"; };
 		7261ADF31CB9FB2D007E283C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		729323F81CB9FAF1009E544E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				340AE8071DDDC90C00CF99D7 /* DKFontTable.txt */,
 				72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */,
 				729323F91CB9FAF1009E544E /* main.m */,
 			);
@@ -167,6 +170,7 @@
 				729324051CB9FAF1009E544E /* Assets.xcassets in Resources */,
 				72E18B9F1CBA038E0004EBB2 /* DKColorTable.txt in Resources */,
 				729324031CB9FAF1009E544E /* Main.storyboard in Resources */,
+				340AE8081DDDC90C00CF99D7 /* DKFontTable.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

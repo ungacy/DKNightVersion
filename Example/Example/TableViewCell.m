@@ -20,8 +20,9 @@
         self.label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 270, 80)];
         self.label.numberOfLines = 0;
         self.label.text = @"DKNightVersion is a light weight framework adding night mode to your iOS app.";
-        self.label.textColor = [UIColor darkGrayColor];
+        self.label.dk_textColorPicker = DKColorPickerWithRGB(0xff0000, 0x00ff00, 0x0000ff);
         self.label.lineBreakMode = NSLineBreakByCharWrapping;
+        self.label.dk_fontPicker = DKFontPickerWithKey(SOME_REGULAR_FONT);
         [self.contentView addSubview:self.label];
 
         CGRect rect = CGRectMake(250, 10, 120, 80);

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DKColor.h"
+#import "DKFont.h"
 #import "DKImage.h"
 
 NS_ASSUME_NONNULL_BEGIN
