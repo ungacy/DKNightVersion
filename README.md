@@ -12,7 +12,7 @@
 
 - [x] Easily integrate and high performance
 - [x] Providing UIKit and CoreAnimation category
-- [x] Read color customization from file
+- [x] Read color/font customization from file
 - [x] Support different themes
 - [x] Generate picker for other libs with one line macro
 
@@ -74,7 +74,9 @@ Import DKNightVersion header file
 
 ## Usage
 
-Checkout `DKColorTable.txt` file in your project, which locates in `Pods/DKNightVersion/Resources/DKNightVersion.txt`
+### Color
+
+Checkout `DKColorTable.txt` file in your project, which locates in `Pods/DKNightVersion/Resources/DKColorTable.txt`
 
 ```
 NORMAL   NIGHT
@@ -89,6 +91,75 @@ self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
 ```
 
 After the current theme version change to `DKThemeVersionNight`, the view background color will switch to `#343434`.
+
+```objectivec
+[DKNightVersionManager nightFalling];
+``` 
+
+or
+
+```objectivec
+DKNightVersionManager *manager = [DKNightVersionManager sharedInstance];
+manager.themeVersion = DKThemeVersionNormal;
+```
+
+### Font
+
+Checkout `DKFontTable.txt` file in your project, which locates in `Pods/DKNightVersion/Resources/DKFontTable.txt`
+
+```
+NORMAL                   NIGHT                   RED
+PingFangSC-Light@25      PingFangSC-Semibold@26  PingFangSC-Regular@25    SOME_DEMO_FONT
+```
+
+or `PLAN B`
+
+```
+NORMAL   NIGHT    RED
+#L:25    #S:26    #R:25    SOME_DEMO_FONT
+```
+
+And then set up your own font parser.
+
+```objectivec
+[[DKFontTable sharedFontTable] setGenerator:^UIFont *(NSString *fontElement) {
+    NSArray *fontElememtArray = [fontElement componentsSeparatedByString:@"@"];
+    NSAssert([fontElememtArray count] >= 2, @"Failed to parse font!");
+    NSString *fontName = [fontElememtArray firstObject];
+    CGFloat fontSize = [[fontElememtArray lastObject] floatValue];
+    UIFont *font = [UIFont fontWithName:fontName size:fontSize];
+    return font;
+}];
+[DKFontTable sharedFontTable].file = @"DKFontTable.txt";
+```
+
+or `PLAN B`
+
+```objectivec
+NSDictionary *fontMapping = @{@"#R":@"PingFangSC-Regular",
+                              @"#S":@"PingFangSC-Semibold",
+                              @"#L":@"PingFangSC-Light",
+                              @"#M":@"PingFangSC-Medium",
+                              };
+[[DKFontTable sharedFontTable] setGenerator:^UIFont *(NSString *fontElement) {
+    NSArray *fontElememtArray = [fontElement componentsSeparatedByString:@":"];
+    NSAssert([fontElememtArray count] >= 2, @"Failed to parse font!");
+    NSString *abbrFontName = [fontElememtArray firstObject];
+    CGFloat fontSize = [[fontElememtArray lastObject] floatValue];
+    NSString *fontName = fontMapping[abbrFontName];
+    UIFont *font = [UIFont fontWithName:fontName size:fontSize];
+    return font;
+}];
+```
+
+
+At last, set font picker like this
+
+```objectivec
+self.label.dk_fontPicker = DKFontPickerWithKey(SOME_DEMO_FONT);
+```
+
+After the current theme version change to `DKThemeVersionNight`, the label font will switch to `PingFangSC-Semibold`with size `26`.
 
 ```objectivec
 [DKNightVersionManager nightFalling];
@@ -315,6 +386,8 @@ Feel free to open an issue or pull request, if you need help or there is a bug.
 
 - Powered by [Draveness](http://github.com/draveness)
 - Personal website [Draveness](http://draveness.me)
+
+> Add Font Support  by  [ungacy](http://github.com/ungacy)
 
 # Todo
 
