@@ -26,6 +26,7 @@
 }
 
 - (void)dk_setTextColorPicker:(DKColorPicker)picker {
+    DKColorPickerChecker
     objc_setAssociatedObject(self, @selector(dk_textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.textColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setTextColor:"];
@@ -36,6 +37,7 @@
 }
 
 - (void)dk_setFontPicker:(DKFontPicker)picker {
+    DKFontPickerChecker
     objc_setAssociatedObject(self, @selector(dk_fontPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.font = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setFont:"];

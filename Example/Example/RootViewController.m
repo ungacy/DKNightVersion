@@ -86,11 +86,13 @@
     redItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
 
     self.navigationItem.rightBarButtonItems = @[normalItem, nightItem, redItem];
-
+    DKColorDefaultPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+    DKFontDefaultPicker = DKFontPickerWithFonts([UIFont italicSystemFontOfSize:14],[UIFont systemFontOfSize:15],[UIFont boldSystemFontOfSize:16]);
 //    self.tableView.dk_backgroundColorPicker =  DKColorPickerWithKey(BG);
-    self.tableView.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+    self.tableView.dk_backgroundColorPicker = nil;
     self.tableView.dk_separatorColorPicker = DKColorPickerWithKey(SEP);
     navigationLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
+    navigationLabel.dk_fontPicker = nil;
     self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
     self.navigationItem.leftBarButtonItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
 }

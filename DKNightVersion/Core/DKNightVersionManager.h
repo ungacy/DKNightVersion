@@ -11,6 +11,47 @@
 #import "DKFont.h"
 #import "DKImage.h"
 
+#import "DKColorTable.h"
+#import "DKFontTable.h"
+
+#define DKColorDefaultPicker [DKColorTable sharedColorTable].defaultColorPicker
+
+#define DKFontDefaultPicker [DKFontTable sharedFontTable].defaultFontPicker
+
+
+
+
+#ifdef DEBUG
+#define DKColorPickerChecker \
+if (!picker) {\
+    NSLog(@"%s : NIL BLOCK ERROR [picker] is nil",__PRETTY_FUNCTION__);\
+    picker = DKColorDefaultPicker;\
+}
+#else
+#define DKColorPickerChecker \
+if (!picker) {\
+    picker = DKColorDefaultPicker;\
+}
+#endif
+
+#ifdef DEBUG
+#define DKFontPickerChecker \
+if (!picker) { \
+    NSLog(@"%s : NIL BLOCK ERROR [picker] is nil",__PRETTY_FUNCTION__);\
+    picker = DKFontDefaultPicker; \
+}
+#else
+#define DKFontPickerChecker \
+if (!picker) {\
+    picker = DKFontDefaultPicker;\
+}
+#endif
+
+#define DKImagePickerChecker if (!picker) {\
+    NSAssert(picker, @"[ImagePicker] is nil");\
+    return;\
+}
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**

@@ -18,6 +18,7 @@
 @implementation UIButton (Night)
 
 - (void)dk_setTitleColorPicker:(DKColorPicker)picker forState:(UIControlState)state {
+    DKColorPickerChecker
     [self setTitleColor:picker(self.dk_manager.themeVersion) forState:state];
     NSString *key = [NSString stringWithFormat:@"%@", @(state)];
     NSMutableDictionary *dictionary = [self.pickers valueForKey:key];
@@ -29,6 +30,7 @@
 }
 
 - (void)dk_setBackgroundImage:(DKImagePicker)picker forState:(UIControlState)state {
+    DKImagePickerChecker
     [self setBackgroundImage:picker(self.dk_manager.themeVersion) forState:state];
     NSString *key = [NSString stringWithFormat:@"%@", @(state)];
     NSMutableDictionary *dictionary = [self.pickers valueForKey:key];
@@ -40,6 +42,7 @@
 }
 
 - (void)dk_setImage:(DKImagePicker)picker forState:(UIControlState)state {
+    DKImagePickerChecker
     [self setImage:picker(self.dk_manager.themeVersion) forState:state];
     NSString *key = [NSString stringWithFormat:@"%@", @(state)];
     NSMutableDictionary *dictionary = [self.pickers valueForKey:key];

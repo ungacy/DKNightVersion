@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "DKNightVersionManager.h"
 
+
+#define DKFontWithPicker(picker)  picker(self.dk_manager.themeVersion)
+
 /**
  *  A convinient macro to create DKFontPicker block.
  *
@@ -16,9 +19,18 @@
  *
  *  @return DKFontPicker
  */
-#define DKFontWithPicker(picker)  picker(self.dk_manager.themeVersion)
 
 #define DKFontPickerWithKey(key) [[DKFontTable sharedFontTable] pickerWithKey:@#key]
+
+/**
+ *  A convinient macro to create DKFontPicker block.
+ *
+ *  @param key String key for corresponding entry in table
+ *
+ *  @return DKFontPicker
+ */
+
+#define DKFontPickerWithStringKey(key) [[DKFontTable sharedFontTable] pickerWithKey:key]
 
 /**
  *  DKFontTable is a new feature in 2.x, which providing you a very convinient and
@@ -109,5 +121,7 @@
  *  @param generator Block to generator `UIFont` according to each item you define in `DKFontTable.txt`.
  */
 - (void)setGenerator:(DKFontGenerator)generator;
+
+@property (nonatomic, copy) DKFontPicker defaultFontPicker;
 
 @end

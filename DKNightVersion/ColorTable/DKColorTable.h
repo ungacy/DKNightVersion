@@ -19,6 +19,15 @@
 #define DKColorPickerWithKey(key) [[DKColorTable sharedColorTable] pickerWithKey:@#key]
 
 /**
+ *  A convinient macro to create DKColorPicker block.
+ *
+ *  @param key String key for corresponding entry in table
+ *
+ *  @return DKColorPicker
+ */
+#define DKColorPickerWithStringKey(key) [[DKColorTable sharedColorTable] pickerWithKey:key]
+
+/**
  *  DKColorTable is a new feature in 2.x, which providing you a very convinient and
  *  delightful approach to manage all your color in an iOS project. Besides that, we
  *  support multiple themes with DKColorTable, change your `DKColorTable.txt` file 
@@ -83,5 +92,7 @@
  *  @return An DKColorPicker block
  */
 - (DKColorPicker)pickerWithKey:(NSString *)key;
+
+@property (nonatomic, copy) DKColorPicker defaultColorPicker;
 
 @end

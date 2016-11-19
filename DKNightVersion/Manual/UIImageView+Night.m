@@ -19,6 +19,9 @@
 @implementation UIImageView (Night)
 
 - (instancetype)dk_initWithImagePicker:(DKImagePicker)picker {
+    if (!picker) {
+        return nil;
+    }
     UIImageView *imageView = [self initWithImage:picker(self.dk_manager.themeVersion)];
     imageView.dk_imagePicker = [picker copy];
     return imageView;
@@ -29,6 +32,7 @@
 }
 
 - (void)dk_setImagePicker:(DKImagePicker)picker {
+    DKImagePickerChecker
     objc_setAssociatedObject(self, @selector(dk_imagePicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.image = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setImage:"];
