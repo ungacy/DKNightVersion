@@ -65,6 +65,29 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
 
     // Load color table file
     NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
+    if ([self.file.pathExtension isEqualToString:@"plist"]) {
+        self.table = [NSMutableDictionary dictionary];
+        NSDictionary *colorTable = [NSDictionary dictionaryWithContentsOfFile:filepath];
+        [colorTable enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key,
+                                                        NSDictionary * _Nonnull themeParam,
+                                                        BOOL * _Nonnull stop) {
+            NSMutableDictionary *itemDict = [NSMutableDictionary dictionary];
+            NSParameterAssert([themeParam isKindOfClass:[NSDictionary class]]);
+            [themeParam enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull theme,
+                                                     NSString * _Nonnull item,
+                                                     BOOL * _Nonnull stop) {
+                UIColor *color = [self colorFromString:item];
+                if (!color) {
+                    NSString *msg = [NSString stringWithFormat:@"[%@] is invalid",item];
+                    NSAssert(color, msg);
+                }
+                itemDict[theme] = color;
+            }];
+            self.table[key] = itemDict;
+        }];
+        self.themes = [[[self.table allValues] firstObject] allKeys];
+        return;
+    }
     NSError *error;
     NSString *fileContents = [NSString stringWithContentsOfFile:filepath
                                                        encoding:NSUTF8StringEncoding

@@ -39,6 +39,29 @@
     
     // Load font table file
     NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
+    if ([self.file.pathExtension isEqualToString:@"plist"]) {
+        self.table = [NSMutableDictionary dictionary];
+        NSDictionary *colorTable = [NSDictionary dictionaryWithContentsOfFile:filepath];
+        [colorTable enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key,
+                                                        NSDictionary * _Nonnull themeParam,
+                                                        BOOL * _Nonnull stop) {
+            NSParameterAssert([themeParam isKindOfClass:[NSDictionary class]]);
+            NSMutableDictionary *itemDict = [NSMutableDictionary dictionary];
+            [themeParam enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull theme,
+                                                            NSString * _Nonnull item,
+                                                            BOOL * _Nonnull stop) {
+                UIFont *font = [self fontFromString:item];
+                if (!font) {
+                    NSString *msg = [NSString stringWithFormat:@"[%@] is invalid",item];
+                    NSAssert(font, msg);
+                }
+                itemDict[theme] = font;
+            }];
+            self.table[key] = itemDict;
+        }];
+        self.themes = [[[self.table allValues] firstObject] allKeys];
+        return;
+    }
     NSError *error;
     NSString *fileContents = [NSString stringWithContentsOfFile:filepath
                                                        encoding:NSUTF8StringEncoding

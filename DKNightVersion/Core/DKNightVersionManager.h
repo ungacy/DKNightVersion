@@ -25,6 +25,7 @@
 #define DKColorPickerChecker \
 if (!picker) {\
     NSLog(@"%s : NIL BLOCK ERROR [picker] is nil",__PRETTY_FUNCTION__);\
+    NSParameterAssert(picker);\
     picker = DKColorDefaultPicker;\
 }
 #else
@@ -38,6 +39,7 @@ if (!picker) {\
 #define DKFontPickerChecker \
 if (!picker) { \
     NSLog(@"%s : NIL BLOCK ERROR [picker] is nil",__PRETTY_FUNCTION__);\
+    NSParameterAssert(picker);\
     picker = DKFontDefaultPicker; \
 }
 #else
