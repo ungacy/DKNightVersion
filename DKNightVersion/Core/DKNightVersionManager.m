@@ -55,15 +55,18 @@ NSString * const DKNightVersionCurrentThemeVersionKey = @"com.dknightversion.man
         // if type does not change, don't execute code below to enhance performance.
         return;
     }
+    BOOL isInit = _themeVersion == nil;
     _themeVersion = themeVersion;
 
     // Save current theme version to user default
     [[NSUserDefaults standardUserDefaults] setValue:themeVersion forKey:DKNightVersionCurrentThemeVersionKey];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionThemeChangingNotification
-                                                            object:nil];
-    });
-
+    if (!isInit) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionThemeChangingNotification
+                                                                object:nil];
+        });
+    }
+    
     if (self.shouldChangeStatusBar) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"

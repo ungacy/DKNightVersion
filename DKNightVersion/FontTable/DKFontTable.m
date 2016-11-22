@@ -52,8 +52,10 @@
                                                             BOOL * _Nonnull stop) {
                 UIFont *font = [self fontFromString:item];
                 if (!font) {
+#ifdef DEBUG
                     NSString *msg = [NSString stringWithFormat:@"[%@] is invalid",item];
                     NSAssert(font, msg);
+#endif
                 }
                 itemDict[theme] = font;
             }];

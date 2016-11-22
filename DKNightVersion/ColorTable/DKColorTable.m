@@ -78,8 +78,10 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
                                                      BOOL * _Nonnull stop) {
                 UIColor *color = [self colorFromString:item];
                 if (!color) {
+#ifdef DEBUG
                     NSString *msg = [NSString stringWithFormat:@"[%@] is invalid",item];
                     NSAssert(color, msg);
+#endif
                 }
                 itemDict[theme] = color;
             }];
